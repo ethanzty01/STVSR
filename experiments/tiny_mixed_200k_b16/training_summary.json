@@ -1,9 +1,0 @@
-{
-  "additional_steps": 200000,
-  "base_step": 20000,
-  "cumulative_step": 220000,
-  "examples": 3200000,
-  "examples_per_dataset": 1600000,
-  "seconds": 5417.38919043541,
-  "best_validation_psnr_y": 29.207040773158774
-}

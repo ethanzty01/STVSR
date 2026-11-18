@@ -1,9 +1,0 @@
-{
-  "seconds": 707.6136323548853,
-  "steps": 10000,
-  "examples_per_arm": 40000,
-  "best_validation_psnr_y": {
-    "distilled": 31.788960387940417,
-    "supervised": 31.74956532205843
-  }
-}

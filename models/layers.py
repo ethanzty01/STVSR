@@ -2,7 +2,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from .torch_layers import DropPath, trunc_normal_
+from timm.models.layers import DropPath, trunc_normal_
 
 
 def initialize_weights(net_l, scale=1):

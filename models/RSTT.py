@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from .layers import (make_layer, ResidualBlock_noBN, EncoderLayer, DecoderLayer, 
                      InputProj, Downsample, Upsample)
-from .torch_layers import trunc_normal_
+from timm.models.layers import trunc_normal_
 
 class RSTT(nn.Module):
     def __init__(self, in_chans=3, embed_dim=96, 
