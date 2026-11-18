@@ -1,0 +1,32 @@
+{
+  "model_config": {
+    "embed_dim": 32,
+    "depth": 2,
+    "drop_path_rate": 0.0,
+    "head": "direct"
+  },
+  "step": 74000,
+  "cumulative_step": 214000,
+  "selected_stage": "09_gt_recovery",
+  "source_checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/distilled_best.pth",
+  "validation_psnr_y": {
+    "vimeo": 33.14001868682518,
+    "reds": 25.518034728220698,
+    "balanced_mean": 29.32902670752294
+  },
+  "parameters": 286140,
+  "path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/final.pth",
+  "sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+  "total_executed_updates": 220000,
+  "total_training_sample_visits": 3520000,
+  "initial_checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/final.pth",
+  "extension_training_summary": {
+    "additional_steps": 80000,
+    "base_step": 140000,
+    "cumulative_step": 220000,
+    "examples": 1280000,
+    "examples_per_dataset": 640000,
+    "seconds": 2238.2181855654344,
+    "best_validation_psnr_y": 29.32902670752294
+  }
+}

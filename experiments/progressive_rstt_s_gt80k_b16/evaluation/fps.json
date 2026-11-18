@@ -1,0 +1,59 @@
+{
+  "protocol": "FP32; LR 144x180; batch 1; 10 warmups, 100 timed calls; model forward only; unique streaming FPS excludes the shared endpoint between calls.",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "models": {
+    "progressive": {
+      "input_shape": [
+        1,
+        2,
+        3,
+        144,
+        180
+      ],
+      "output_frames_per_call": 3,
+      "milliseconds_per_call": 14.262584373354912,
+      "returned_frames_per_second": 210.3405611120901,
+      "unique_stream_frames_per_second": 140.2270407413934
+    },
+    "previous_tiny": {
+      "input_shape": [
+        1,
+        2,
+        3,
+        144,
+        180
+      ],
+      "output_frames_per_call": 3,
+      "milliseconds_per_call": 14.22418525442481,
+      "returned_frames_per_second": 210.9083892215739,
+      "unique_stream_frames_per_second": 140.6055928143826
+    },
+    "intermediate": {
+      "input_shape": [
+        1,
+        2,
+        3,
+        144,
+        180
+      ],
+      "output_frames_per_call": 3,
+      "milliseconds_per_call": 14.220368443056941,
+      "returned_frames_per_second": 210.9649979895382,
+      "unique_stream_frames_per_second": 140.64333199302547
+    },
+    "teacher": {
+      "input_shape": [
+        1,
+        4,
+        3,
+        144,
+        180
+      ],
+      "output_frames_per_call": 7,
+      "milliseconds_per_call": 84.11417823284864,
+      "returned_frames_per_second": 83.22021503464357,
+      "unique_stream_frames_per_second": 71.33161288683735
+    }
+  }
+}

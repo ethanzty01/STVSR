@@ -1,0 +1,22 @@
+{
+  "source": "/home/tyzheng/Datasets_pt/test/REDS/000",
+  "source_resolution": [
+    1280,
+    720
+  ],
+  "resize": "cv2.INTER_AREA",
+  "codec": "mp4v",
+  "output": "experiments/tiny_mixed_200k_b16/demo_input_960x540_60fps.mp4",
+  "verified_video": {
+    "width": 960,
+    "height": 540,
+    "fps": 60.0,
+    "container_frame_count": 60,
+    "decoded_frame_count": 60,
+    "duration_seconds": 1.0
+  },
+  "source_frame_index_range_inclusive": [
+    0,
+    59
+  ]
+}

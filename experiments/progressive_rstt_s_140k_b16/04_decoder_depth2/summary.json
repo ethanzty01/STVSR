@@ -1,0 +1,54 @@
+{
+  "stage": "04_decoder_depth2",
+  "steps": 10000,
+  "cumulative_optimizer_steps": 50000,
+  "best_step": 10000,
+  "parameters": 2133564,
+  "before": {
+    "vimeo": 34.32063627192964,
+    "reds": 25.95024603708238,
+    "balanced_mean": 30.135441154506008
+  },
+  "after_surgery": {
+    "vimeo": 29.383340087231048,
+    "reds": 24.041762418847455,
+    "balanced_mean": 26.71255125303925
+  },
+  "recovered_best": {
+    "vimeo": 33.8789768087342,
+    "reds": 25.759922027864892,
+    "balanced_mean": 29.81944941829955
+  },
+  "surgery_delta_psnr_y": -3.422889901466757,
+  "recovery_delta_psnr_y": 3.106898165260297,
+  "net_delta_psnr_y": -0.3159917362064597,
+  "seconds": 409.8924535997212,
+  "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/04_decoder_depth2/best.pth",
+  "model_config": {
+    "embed_dim": 96,
+    "depths": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "num_frames": 2,
+    "head": "direct",
+    "baseline_mode": "separable",
+    "drop_path_rate": 0.0
+  },
+  "batch_size": 16,
+  "precision": "bf16",
+  "compile": true,
+  "compile_mode": "reduce-overhead",
+  "optimizer_state_tensors": 344,
+  "parameter_tensors": 344,
+  "trainable_parameter_tensors": 344,
+  "peak_allocated_mib": 1090.474609375,
+  "peak_reserved_mib": 1584.0,
+  "memory_scope": "Current process since stage training began, including validation"
+}

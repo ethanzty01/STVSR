@@ -1,0 +1,457 @@
+{
+  "optimizer_steps": 140000,
+  "stages": [
+    {
+      "stage": "01_direct_head",
+      "steps": 10000,
+      "cumulative_optimizer_steps": 10000,
+      "best_step": 10000,
+      "parameters": 3786984,
+      "before": {
+        "vimeo": 35.8017942401485,
+        "reds": 26.52323815550474,
+        "balanced_mean": 31.16251619782662
+      },
+      "after_surgery": {
+        "vimeo": 29.52240288182897,
+        "reds": 23.721974663125152,
+        "balanced_mean": 26.62218877247706
+      },
+      "recovered_best": {
+        "vimeo": 34.90954376675694,
+        "reds": 26.283165340414133,
+        "balanced_mean": 30.596354553585535
+      },
+      "surgery_delta_psnr_y": -4.54032742534956,
+      "recovery_delta_psnr_y": 3.974165781108475,
+      "net_delta_psnr_y": -0.5661616442410846,
+      "seconds": 602.0667605958879,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/01_direct_head/best.pth",
+      "model_config": {
+        "embed_dim": 96,
+        "depths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "num_frames": 4,
+        "head": "direct",
+        "baseline_mode": "original",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 672,
+      "parameter_tensors": 672,
+      "trainable_parameter_tensors": 672,
+      "peak_allocated_mib": 4975.2109375,
+      "peak_reserved_mib": 6090.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "02_two_frames",
+      "steps": 20000,
+      "cumulative_optimizer_steps": 30000,
+      "best_step": 18000,
+      "parameters": 3669384,
+      "before": {
+        "vimeo": 34.90954376675694,
+        "reds": 26.283165340414133,
+        "balanced_mean": 30.596354553585535
+      },
+      "after_surgery": {
+        "vimeo": 33.2698795209052,
+        "reds": 25.628663684435363,
+        "balanced_mean": 29.44927160267028
+      },
+      "recovered_best": {
+        "vimeo": 34.556597164552194,
+        "reds": 26.05423723753383,
+        "balanced_mean": 30.305417201043014
+      },
+      "surgery_delta_psnr_y": -1.1470829509152551,
+      "recovery_delta_psnr_y": 0.8561455983727342,
+      "net_delta_psnr_y": -0.29093735254252096,
+      "seconds": 1086.6696886029094,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/02_two_frames/best.pth",
+      "model_config": {
+        "embed_dim": 96,
+        "depths": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 672,
+      "parameter_tensors": 672,
+      "trainable_parameter_tensors": 672,
+      "peak_allocated_mib": 1970.935546875,
+      "peak_reserved_mib": 2392.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "03_encoder_depth2",
+      "steps": 10000,
+      "cumulative_optimizer_steps": 40000,
+      "best_step": 10000,
+      "parameters": 3062292,
+      "before": {
+        "vimeo": 34.556597164552194,
+        "reds": 26.05423723753383,
+        "balanced_mean": 30.305417201043014
+      },
+      "after_surgery": {
+        "vimeo": 33.54919472890919,
+        "reds": 25.480681921678382,
+        "balanced_mean": 29.514938325293787
+      },
+      "recovered_best": {
+        "vimeo": 34.32063627192964,
+        "reds": 25.95024603708238,
+        "balanced_mean": 30.135441154506008
+      },
+      "surgery_delta_psnr_y": -0.7904788757492263,
+      "recovery_delta_psnr_y": 0.6205028292122208,
+      "net_delta_psnr_y": -0.1699760465370055,
+      "seconds": 496.6860282216221,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/03_encoder_depth2/best.pth",
+      "model_config": {
+        "embed_dim": 96,
+        "depths": [
+          2,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 552,
+      "parameter_tensors": 552,
+      "trainable_parameter_tensors": 552,
+      "peak_allocated_mib": 1687.6337890625,
+      "peak_reserved_mib": 2120.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "04_decoder_depth2",
+      "steps": 10000,
+      "cumulative_optimizer_steps": 50000,
+      "best_step": 10000,
+      "parameters": 2133564,
+      "before": {
+        "vimeo": 34.32063627192964,
+        "reds": 25.95024603708238,
+        "balanced_mean": 30.135441154506008
+      },
+      "after_surgery": {
+        "vimeo": 29.383340087231048,
+        "reds": 24.041762418847455,
+        "balanced_mean": 26.71255125303925
+      },
+      "recovered_best": {
+        "vimeo": 33.8789768087342,
+        "reds": 25.759922027864892,
+        "balanced_mean": 29.81944941829955
+      },
+      "surgery_delta_psnr_y": -3.422889901466757,
+      "recovery_delta_psnr_y": 3.106898165260297,
+      "net_delta_psnr_y": -0.3159917362064597,
+      "seconds": 409.8924535997212,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/04_decoder_depth2/best.pth",
+      "model_config": {
+        "embed_dim": 96,
+        "depths": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 344,
+      "parameter_tensors": 344,
+      "trainable_parameter_tensors": 344,
+      "peak_allocated_mib": 1090.474609375,
+      "peak_reserved_mib": 1584.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "05_width64",
+      "steps": 20000,
+      "cumulative_optimizer_steps": 70000,
+      "best_step": 20000,
+      "parameters": 984572,
+      "before": {
+        "vimeo": 33.8789768087342,
+        "reds": 25.759922027864892,
+        "balanced_mean": 29.81944941829955
+      },
+      "after_surgery": {
+        "vimeo": 26.44476395192002,
+        "reds": 22.949197189707416,
+        "balanced_mean": 24.696980570813718
+      },
+      "recovered_best": {
+        "vimeo": 33.2945759299209,
+        "reds": 25.560208721445083,
+        "balanced_mean": 29.427392325682995
+      },
+      "surgery_delta_psnr_y": -5.12246884748583,
+      "recovery_delta_psnr_y": 4.730411754869277,
+      "net_delta_psnr_y": -0.39205709261655386,
+      "seconds": 876.5764432922006,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/05_width64/best.pth",
+      "model_config": {
+        "embed_dim": 64,
+        "depths": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 344,
+      "parameter_tensors": 344,
+      "trainable_parameter_tensors": 344,
+      "peak_allocated_mib": 832.021484375,
+      "peak_reserved_mib": 1836.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "06_width48",
+      "steps": 20000,
+      "cumulative_optimizer_steps": 90000,
+      "best_step": 20000,
+      "parameters": 579036,
+      "before": {
+        "vimeo": 33.2945759299209,
+        "reds": 25.560208721445083,
+        "balanced_mean": 29.427392325682995
+      },
+      "after_surgery": {
+        "vimeo": 27.375961113669817,
+        "reds": 23.533907128448135,
+        "balanced_mean": 25.454934121058976
+      },
+      "recovered_best": {
+        "vimeo": 33.047243188467085,
+        "reds": 25.473473004428694,
+        "balanced_mean": 29.260358096447888
+      },
+      "surgery_delta_psnr_y": -3.9724582046240187,
+      "recovery_delta_psnr_y": 3.805423975388912,
+      "net_delta_psnr_y": -0.16703422923510658,
+      "seconds": 942.5663954131305,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/06_width48/best.pth",
+      "model_config": {
+        "embed_dim": 48,
+        "depths": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 344,
+      "parameter_tensors": 344,
+      "trainable_parameter_tensors": 344,
+      "peak_allocated_mib": 697.29541015625,
+      "peak_reserved_mib": 1062.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "07_width32",
+      "steps": 30000,
+      "cumulative_optimizer_steps": 120000,
+      "best_step": 30000,
+      "parameters": 286140,
+      "before": {
+        "vimeo": 33.047243188467085,
+        "reds": 25.473473004428694,
+        "balanced_mean": 29.260358096447888
+      },
+      "after_surgery": {
+        "vimeo": 28.04971032586003,
+        "reds": 23.642939479799626,
+        "balanced_mean": 25.846324902829828
+      },
+      "recovered_best": {
+        "vimeo": 32.68241337343597,
+        "reds": 25.34149169817643,
+        "balanced_mean": 29.011952535806202
+      },
+      "surgery_delta_psnr_y": -3.41403319361806,
+      "recovery_delta_psnr_y": 3.165627632976374,
+      "net_delta_psnr_y": -0.24840556064168595,
+      "seconds": 1316.5027018981054,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/07_width32/best.pth",
+      "model_config": {
+        "embed_dim": 32,
+        "depths": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 344,
+      "parameter_tensors": 344,
+      "trainable_parameter_tensors": 344,
+      "peak_allocated_mib": 589.25146484375,
+      "peak_reserved_mib": 1032.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    },
+    {
+      "stage": "08_gt_finetune",
+      "steps": 20000,
+      "cumulative_optimizer_steps": 140000,
+      "best_step": 20000,
+      "parameters": 286140,
+      "before": {
+        "vimeo": 32.68241337343597,
+        "reds": 25.34149169817643,
+        "balanced_mean": 29.011952535806202
+      },
+      "after_surgery": {
+        "vimeo": 32.68241337343597,
+        "reds": 25.34149169817643,
+        "balanced_mean": 29.011952535806202
+      },
+      "recovered_best": {
+        "vimeo": 32.79379225015529,
+        "reds": 25.381822516685563,
+        "balanced_mean": 29.087807383420426
+      },
+      "surgery_delta_psnr_y": 0.0,
+      "recovery_delta_psnr_y": 0.07585484761422379,
+      "net_delta_psnr_y": 0.07585484761422379,
+      "seconds": 651.6733865253627,
+      "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/08_gt_finetune/best.pth",
+      "model_config": {
+        "embed_dim": 32,
+        "depths": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "num_frames": 2,
+        "head": "direct",
+        "baseline_mode": "separable",
+        "drop_path_rate": 0.0
+      },
+      "batch_size": 16,
+      "precision": "bf16",
+      "compile": true,
+      "compile_mode": "reduce-overhead",
+      "optimizer_state_tensors": 344,
+      "parameter_tensors": 344,
+      "trainable_parameter_tensors": 344,
+      "peak_allocated_mib": 537.06298828125,
+      "peak_reserved_mib": 784.0,
+      "memory_scope": "Current process since stage training began, including validation"
+    }
+  ],
+  "final": {
+    "model_config": {
+      "embed_dim": 32,
+      "depth": 2,
+      "head": "direct",
+      "drop_path_rate": 0.0
+    },
+    "step": 20000,
+    "cumulative_step": 140000,
+    "selected_stage": "08_gt_finetune",
+    "source_checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/08_gt_finetune/best.pth",
+    "validation_psnr_y": {
+      "vimeo": 32.79379225015529,
+      "reds": 25.381822516685563,
+      "balanced_mean": 29.087807383420426
+    },
+    "parameters": 286140,
+    "path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/final.pth",
+    "sha256": "1c8840c86b0ceccc80459ab1a91099016dd1c86d64168dd7daad878238e16185"
+  }
+}

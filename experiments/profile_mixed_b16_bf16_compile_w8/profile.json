@@ -1,0 +1,13 @@
+{
+  "batch_size": 16,
+  "precision": "bf16",
+  "compile": true,
+  "warmup_steps": 10,
+  "measured_steps": 200,
+  "seconds": 7.648273829370737,
+  "seconds_per_step": 0.038241369146853686,
+  "samples_per_second": 418.3950616034992,
+  "estimated_200k_hours": 2.124520508158538,
+  "peak_allocated_mib": 946.56982421875,
+  "peak_reserved_mib": 1664.0
+}

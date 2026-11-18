@@ -1,0 +1,99 @@
+{
+  "checked_at_utc": "2026-11-17T02:18:59.377064+00:00",
+  "pass": true,
+  "errors": [],
+  "scope": "CPU independent evidence, report numerical values and local-link review",
+  "checkpoint_sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+  "parameters": 286140,
+  "executed_optimizer_steps": 220000,
+  "selected_cumulative_step": 214000,
+  "evidence_audits_passed": true,
+  "quality_rows": {
+    "Vid4，序列等权": {
+      "all_four_model_psnr_ssim_match": true,
+      "gain_matches": true
+    },
+    "Vimeo-Fast": {
+      "all_four_model_psnr_ssim_match": true,
+      "gain_matches": true
+    },
+    "Vimeo-Medium": {
+      "all_four_model_psnr_ssim_match": true,
+      "gain_matches": true
+    },
+    "Vimeo-Slow": {
+      "all_four_model_psnr_ssim_match": true,
+      "gain_matches": true
+    },
+    "Vimeo 全部": {
+      "all_four_model_psnr_ssim_match": true,
+      "gain_matches": true
+    },
+    "REDS": {
+      "all_four_model_psnr_ssim_match": true,
+      "gain_matches": true
+    }
+  },
+  "deployment_rows": {
+    "fp32": {
+      "three_peak_columns_match": true,
+      "timings_match": true,
+      "peak_gib": {
+        "peak_allocated_gib": 3.5525059700012207,
+        "peak_reserved_gib": 5.248046875,
+        "sampled_process_peak_gib": 5.84765625
+      },
+      "video_path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/demo_4k120_fp32.mp4",
+      "video_bytes": 47276757,
+      "video_sha256": "cb2a9f9e5cbe90b5d045487136c2f610e7e6f235d76ef464c26273e188ed90e6",
+      "independent_cpu_video_check": {
+        "width": 3840,
+        "height": 2160,
+        "fps": 120.0,
+        "frames_grabbed": 120,
+        "method": "OpenCV VideoCapture, frame-by-frame grab in immediately preceding independent CPU check"
+      }
+    },
+    "amp-fp16": {
+      "three_peak_columns_match": true,
+      "timings_match": true,
+      "peak_gib": {
+        "peak_allocated_gib": 2.8770699501037598,
+        "peak_reserved_gib": 3.876953125,
+        "sampled_process_peak_gib": 4.478515625
+      },
+      "video_path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/demo_4k120_amp_fp16.mp4",
+      "video_bytes": 47279474,
+      "video_sha256": "bc6c6b7f2f17fd7ecb44d79540aa15cd94a604a540f68e2cf25c420d51f430fc",
+      "independent_cpu_video_check": {
+        "width": 3840,
+        "height": 2160,
+        "fps": 120.0,
+        "frames_grabbed": 120,
+        "method": "OpenCV VideoCapture, frame-by-frame grab in immediately preceding independent CPU check"
+      }
+    }
+  },
+  "documents": {
+    "experiments/progressive_rstt_s_140k_b16/REPORT.md": {
+      "sha256_at_review": "bd5deabe45f9604937e67cb64f0e6f91e3973685d7764f24a9aa8273d8c4210c",
+      "local_links_checked": 41,
+      "missing_local_links": [],
+      "pending_placeholders": []
+    },
+    "PROGRESSIVE_TRAINING.md": {
+      "sha256_at_review": "0a0a14b4a23149746112a7753fb087daf0c28ec2690dabdf3c60e387d22a4f8e",
+      "local_links_checked": 4,
+      "missing_local_links": [],
+      "pending_placeholders": []
+    }
+  },
+  "short_summary_fps": "8.08 / 9.69",
+  "guide_video_seconds": "28.26 / 25.71",
+  "source_snapshot": {
+    "pass": true,
+    "file_count": 24,
+    "manifest_sha256": "74927142be92c894de48fb151f3ca5c75fa1ae8abfb7bc04748e2252172f3cb3",
+    "copied_files_match_manifest_and_current_sources": true
+  }
+}

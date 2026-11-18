@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-17T02:18:36.990526+00:00",
+  "purpose": "Final delivered training, evaluation, deployment and documentation source snapshot. Original pre-training snapshot is preserved in the 140k run.",
+  "files": {
+    "train_progressive.py": "91543e50d3c72ac046af4e2c139b38130e58240dc596841930bc4257c194cedb",
+    "evaluate_progressive.py": "d161648213d78182194788de840e92b7d5935510940835401561924dca6362b6",
+    "audit_progressive.py": "f9cecb4e0556fc6cf9387632aa59d315460ae095b70da6b1a14a901252761988",
+    "PROGRESSIVE_TRAINING.md": "0a0a14b4a23149746112a7753fb087daf0c28ec2690dabdf3c60e387d22a4f8e",
+    "train_tiny_mixed.py": "f675cbfad45ed20aab9d0bb635bec9d830ccd117ab51643e02b9845c1f990437",
+    "distill_tiny.py": "b6cc32e47446298e98c6fdc3a3437b7e2a2457fc250d514898757b0ad7d93cf9",
+    "distill_data.py": "2910dba31455c5dcd036e0edf404ecccb6bdc2d1c7ab7d2477d0bf8410647bfd",
+    "distill_metrics.py": "bf5fa082cbbbd0c1ddefdd5f5bb714265a0a57157425737aa0be99f3095532b2",
+    "eval_paper_tiny.py": "fabc2813b995c0514ea0cda996bf9c956365f77f89a2ea90ef3bee947263e084",
+    "models/RSTT_progressive.py": "59dcaa712470bee0425bd7f09a67f5c0d22b371dcd1e7a09f3cbc5c055341a5e",
+    "models/RSTT_tiny.py": "e39ce2f45deee15b8d1068e9ef3d9fa3117bb020e8aed8ed67d0083d5c4c13ff",
+    "models/RSTT.py": "6a2fad78fab02bfa5e62b80d2db7c25cae3e9ec72ee7a2877666229888217c4e",
+    "models/layers.py": "8e2ca25c4498966e9e99b8a754929878acf307b10fc469030f31520575d9dd8e",
+    "models/torch_layers.py": "9401ba2869262beeda289a6685ac06b4d795c232633c51b4ffe0c7a980ec86b4",
+    "utils/eval_utils.py": "3055dee5eb9dfea190b23e70141e5d8999bb9a444e18a1c3a8c51a94c810253a",
+    "tests/test_progressive_model.py": "e9ba537f5484f794d07225664b59ec8ba5de28e16059cb9a50c7e272be4eccbd",
+    "tests/test_progressive_training.py": "79158ea967e531a428cfd1f595965c21b40c22c9e0ff436fb7a7e1c5179d638c",
+    "tests/test_progressive_evaluation.py": "79a4dbb973eae080beb3b8f311169abdae6d22aa242fa04cf5053b1073dfd959",
+    "plot_progressive_results.py": "906a891d3203212fc7a5c1fca0ac1b5cd6db56428de236b17a82cf89b7cbfdf0",
+    "benchmark_tiny_4k.py": "de1f8cffd6960d01f1bc066dd26f3b521df58cbfb2c319f0b111370c65d8fa68",
+    "infer_tiny_video.py": "fea4c69d8cb2ccab3221b421e05d6bdc2fbbbc704ef35fd06dba3bd5a5bce7c1",
+    "evaluate_tiny_mixed.py": "256b29135ce55b1affa8ef8670fa1fc7b07ab1c3e99a8ea4b8ee0b352eea388c",
+    "models/__init__.py": "4a92af73aaa9897f908215a20974fa73b52f4283735850df6bae83f285ff32f2",
+    "utils/__init__.py": "a2a46cb001c6c819eecf40aede85c34b802d952c41b15d02d9518ac3f7d06d80"
+  }
+}

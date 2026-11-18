@@ -1,0 +1,573 @@
+{
+  "protocol": "FP32; full-frame middle triple of each 7-frame window; bicubic antialiased x4 degradation; rounded uint8 RGB/Y PSNR and Y SSIM; no border crop; arithmetic frame mean; initial denotes previous 20k tiny",
+  "checkpoints": {
+    "initial": {
+      "path": "/home/tyzheng/RSTT/experiments/tiny_mixed_200k_b16/initial.pth",
+      "sha256": "e1fe32a8200f13640eb7322f5b4ee24a04f1d19bfc79cf74352c23f79d857418",
+      "step": 0,
+      "base_step": 20000,
+      "cumulative_step": 20000,
+      "validation_psnr_y": null
+    },
+    "trained_best": {
+      "path": "/home/tyzheng/RSTT/experiments/tiny_mixed_200k_b16/distilled_best.pth",
+      "sha256": "882203dc99011eea7773d53abceb9c6e9707fc005430031f6a08323f01d9dbc8",
+      "step": 198000,
+      "base_step": 20000,
+      "cumulative_step": 218000,
+      "validation_psnr_y": {
+        "vimeo": 32.98898804780025,
+        "reds": 25.4250934985173,
+        "balanced_mean": 29.207040773158774
+      }
+    },
+    "trained_last": {
+      "path": "/home/tyzheng/RSTT/experiments/tiny_mixed_200k_b16/distilled_last.pth",
+      "sha256": "83e89a1825c0e0d503f789eee18f9a9ca56e3c332680c5f9b697ffb4dbe260ba",
+      "step": 200000,
+      "base_step": 20000,
+      "cumulative_step": 220000,
+      "validation_psnr_y": {
+        "vimeo": 32.98653814405531,
+        "reds": 25.4256816416836,
+        "balanced_mean": 29.206109892869456
+      }
+    }
+  },
+  "teacher_sha256": "c18b45d025f4217b3fe13f9e853a46543707d79c58864c2fdfefc9071fb422da",
+  "datasets": {
+    "Vimeo-90k": {
+      "windows": 7815,
+      "scored_frames_per_model": 23445,
+      "batch_size": 4,
+      "seconds": 364.6716297566891,
+      "metrics": {
+        "bilinear": {
+          "all": {
+            "all": {
+              "psnr_rgb": 27.903098174372047,
+              "psnr_y": 29.419128112151327,
+              "ssim_y": 0.8352287077708771
+            },
+            "endpoints": {
+              "psnr_rgb": 28.913049644714867,
+              "psnr_y": 30.434657670046736,
+              "ssim_y": 0.8538794002691181
+            },
+            "center": {
+              "psnr_rgb": 25.88319523368641,
+              "psnr_y": 27.3880689963605,
+              "ssim_y": 0.7979273227743946
+            }
+          },
+          "slow": {
+            "all": {
+              "psnr_rgb": 26.82546109551998,
+              "psnr_y": 28.305559538403454,
+              "ssim_y": 0.8113601634020671
+            },
+            "endpoints": {
+              "psnr_rgb": 27.121672363623343,
+              "psnr_y": 28.599254766274484,
+              "ssim_y": 0.8165448579124529
+            },
+            "center": {
+              "psnr_rgb": 26.233038559313254,
+              "psnr_y": 27.718169082661408,
+              "ssim_y": 0.8009907743812953
+            }
+          },
+          "medium": {
+            "all": {
+              "psnr_rgb": 28.009210167373983,
+              "psnr_y": 29.525073477480273,
+              "ssim_y": 0.8399948339229318
+            },
+            "endpoints": {
+              "psnr_rgb": 28.882942192780718,
+              "psnr_y": 30.402073279311256,
+              "ssim_y": 0.8563469534828623
+            },
+            "center": {
+              "psnr_rgb": 26.261746116560527,
+              "psnr_y": 27.771073873818306,
+              "ssim_y": 0.8072905948030712
+            }
+          },
+          "fast": {
+            "all": {
+              "psnr_rgb": 28.8909424347947,
+              "psnr_y": 30.454961602937562,
+              "ssim_y": 0.8472931585530097
+            },
+            "endpoints": {
+              "psnr_rgb": 31.394140536696003,
+              "psnr_y": 32.98378207533257,
+              "ssim_y": 0.8930137712703394
+            },
+            "center": {
+              "psnr_rgb": 23.884546230992086,
+              "psnr_y": 25.397320658147553,
+              "ssim_y": 0.7558519331183503
+            }
+          }
+        },
+        "initial": {
+          "all": {
+            "all": {
+              "psnr_rgb": 30.110961182125386,
+              "psnr_y": 31.749581329427297,
+              "ssim_y": 0.8790216341188851
+            },
+            "endpoints": {
+              "psnr_rgb": 31.54462987771109,
+              "psnr_y": 33.21896457913423,
+              "ssim_y": 0.899791773170598
+            },
+            "center": {
+              "psnr_rgb": 27.24362379095399,
+              "psnr_y": 28.810814830013438,
+              "ssim_y": 0.8374813560154593
+            }
+          },
+          "slow": {
+            "all": {
+              "psnr_rgb": 28.895802666469482,
+              "psnr_y": 30.461939449501493,
+              "ssim_y": 0.8641533360188156
+            },
+            "endpoints": {
+              "psnr_rgb": 29.370267640452663,
+              "psnr_y": 30.94131477869602,
+              "ssim_y": 0.8702845293187567
+            },
+            "center": {
+              "psnr_rgb": 27.946872718503112,
+              "psnr_y": 29.503188791112436,
+              "ssim_y": 0.851890949418934
+            }
+          },
+          "medium": {
+            "all": {
+              "psnr_rgb": 30.28338731086881,
+              "psnr_y": 31.923817172211884,
+              "ssim_y": 0.8845006553304696
+            },
+            "endpoints": {
+              "psnr_rgb": 31.56314759677473,
+              "psnr_y": 33.2358097303945,
+              "ssim_y": 0.9024925070081978
+            },
+            "center": {
+              "psnr_rgb": 27.72386673905699,
+              "psnr_y": 29.299832055846668,
+              "ssim_y": 0.8485169519750134
+            }
+          },
+          "fast": {
+            "all": {
+              "psnr_rgb": 31.010459829469845,
+              "psnr_y": 32.737168727616215,
+              "ssim_y": 0.8763387576008084
+            },
+            "endpoints": {
+              "psnr_rgb": 34.33245322539934,
+              "psnr_y": 36.14958564875422,
+              "ssim_y": 0.927672289107975
+            },
+            "center": {
+              "psnr_rgb": 24.36647303761084,
+              "psnr_y": 25.91233488534022,
+              "ssim_y": 0.7736716945864753
+            }
+          }
+        },
+        "teacher": {
+          "all": {
+            "all": {
+              "psnr_rgb": 33.78336092579107,
+              "psnr_y": 35.509874420849115,
+              "ssim_y": 0.9337014805138844
+            },
+            "endpoints": {
+              "psnr_rgb": 34.640373862470646,
+              "psnr_y": 36.38838164391245,
+              "ssim_y": 0.9384011275354562
+            },
+            "center": {
+              "psnr_rgb": 32.06933505243193,
+              "psnr_y": 33.75285997472247,
+              "ssim_y": 0.9243021864707405
+            }
+          },
+          "slow": {
+            "all": {
+              "psnr_rgb": 31.863166949854655,
+              "psnr_y": 33.46739781724328,
+              "ssim_y": 0.9146668090913105
+            },
+            "endpoints": {
+              "psnr_rgb": 32.1725394856654,
+              "psnr_y": 33.76951071065622,
+              "ssim_y": 0.9165594245098809
+            },
+            "center": {
+              "psnr_rgb": 31.244421878233172,
+              "psnr_y": 32.86317203041739,
+              "ssim_y": 0.9108815782541695
+            }
+          },
+          "medium": {
+            "all": {
+              "psnr_rgb": 34.00257449451893,
+              "psnr_y": 35.734899619284164,
+              "ssim_y": 0.9377158248830937
+            },
+            "endpoints": {
+              "psnr_rgb": 34.82370108204529,
+              "psnr_y": 36.57575235784436,
+              "ssim_y": 0.9420894438381082
+            },
+            "center": {
+              "psnr_rgb": 32.360321319466244,
+              "psnr_y": 34.05319414216379,
+              "ssim_y": 0.9289685869730647
+            }
+          },
+          "fast": {
+            "all": {
+              "psnr_rgb": 35.42111353936402,
+              "psnr_y": 37.285028991465445,
+              "ssim_y": 0.9424553850682161
+            },
+            "endpoints": {
+              "psnr_rgb": 37.14502470162483,
+              "psnr_y": 39.07547941705789,
+              "ssim_y": 0.9521757534472556
+            },
+            "center": {
+              "psnr_rgb": 31.973291214842405,
+              "psnr_y": 33.70412814028056,
+              "ssim_y": 0.9230146483101371
+            }
+          }
+        },
+        "trained_best": {
+          "all": {
+            "all": {
+              "psnr_rgb": 30.797662476980854,
+              "psnr_y": 32.466681260936824,
+              "ssim_y": 0.8918632169101678
+            },
+            "endpoints": {
+              "psnr_rgb": 31.964448306913905,
+              "psnr_y": 33.6539332097856,
+              "ssim_y": 0.9054599760870278
+            },
+            "center": {
+              "psnr_rgb": 28.464090817114748,
+              "psnr_y": 30.09217736323928,
+              "ssim_y": 0.8646696985564475
+            }
+          },
+          "slow": {
+            "all": {
+              "psnr_rgb": 29.341014522902533,
+              "psnr_y": 30.92400313308237,
+              "ssim_y": 0.8723389965577034
+            },
+            "endpoints": {
+              "psnr_rgb": 29.74535889074252,
+              "psnr_y": 31.326912621668374,
+              "ssim_y": 0.8771244172021234
+            },
+            "center": {
+              "psnr_rgb": 28.53232578722256,
+              "psnr_y": 30.118184155910367,
+              "ssim_y": 0.8627681552688634
+            }
+          },
+          "medium": {
+            "all": {
+              "psnr_rgb": 30.944202707663894,
+              "psnr_y": 32.614133300239736,
+              "ssim_y": 0.8961958986971421
+            },
+            "endpoints": {
+              "psnr_rgb": 31.993610361400822,
+              "psnr_y": 33.68241487280379,
+              "ssim_y": 0.90818677845729
+            },
+            "center": {
+              "psnr_rgb": 28.845387400190038,
+              "psnr_y": 30.477570155111632,
+              "ssim_y": 0.8722141391768461
+            }
+          },
+          "fast": {
+            "all": {
+              "psnr_rgb": 32.120309351935006,
+              "psnr_y": 33.89890250225817,
+              "ssim_y": 0.899968368073232
+            },
+            "endpoints": {
+              "psnr_rgb": 34.76791906863068,
+              "psnr_y": 36.60228502349298,
+              "ssim_y": 0.9316917810540122
+            },
+            "center": {
+              "psnr_rgb": 26.825089918543647,
+              "psnr_y": 28.492137459788534,
+              "ssim_y": 0.8365215421116718
+            }
+          }
+        },
+        "trained_last": {
+          "all": {
+            "all": {
+              "psnr_rgb": 30.79668240403656,
+              "psnr_y": 32.46562371726448,
+              "ssim_y": 0.8918154927276573
+            },
+            "endpoints": {
+              "psnr_rgb": 31.9633561597661,
+              "psnr_y": 33.65278285006364,
+              "ssim_y": 0.9054309546335598
+            },
+            "center": {
+              "psnr_rgb": 28.463334892577475,
+              "psnr_y": 30.091305451666173,
+              "ssim_y": 0.864584568915852
+            }
+          },
+          "slow": {
+            "all": {
+              "psnr_rgb": 29.340058070941776,
+              "psnr_y": 30.923039293543738,
+              "ssim_y": 0.8722859472868714
+            },
+            "endpoints": {
+              "psnr_rgb": 29.74437178803895,
+              "psnr_y": 31.325923495154893,
+              "ssim_y": 0.8770860846743179
+            },
+            "center": {
+              "psnr_rgb": 28.531430636747423,
+              "psnr_y": 30.11727089032144,
+              "ssim_y": 0.8626856725119785
+            }
+          },
+          "medium": {
+            "all": {
+              "psnr_rgb": 30.942936102416112,
+              "psnr_y": 32.61278543010059,
+              "ssim_y": 0.8961396296408216
+            },
+            "endpoints": {
+              "psnr_rgb": 31.99248512947399,
+              "psnr_y": 33.68122932678121,
+              "ssim_y": 0.9081578762312933
+            },
+            "center": {
+              "psnr_rgb": 28.84383804830037,
+              "psnr_y": 30.47589763673934,
+              "ssim_y": 0.8721031364598777
+            }
+          },
+          "fast": {
+            "all": {
+              "psnr_rgb": 32.12046231623807,
+              "psnr_y": 33.89890113006144,
+              "ssim_y": 0.8999623722208565
+            },
+            "endpoints": {
+              "psnr_rgb": 34.76682302454956,
+              "psnr_y": 36.60106531932441,
+              "ssim_y": 0.9316745354109779
+            },
+            "center": {
+              "psnr_rgb": 26.827740899615094,
+              "psnr_y": 28.494572751535486,
+              "ssim_y": 0.8365380458406138
+            }
+          }
+        }
+      },
+      "comparison": {
+        "trained_best": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.7170999315095266,
+            "psnr_y_gap_to_teacher": 3.043193159912292,
+            "ssim_y_gain_over_previous": 0.012841582791282669
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.4349686306513689,
+            "psnr_y_gap_to_teacher": 2.734448434126854,
+            "ssim_y_gain_over_previous": 0.0056682029164297765
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 1.2813625332258418,
+            "psnr_y_gap_to_teacher": 3.660682611483189,
+            "ssim_y_gain_over_previous": 0.02718834254098823
+          }
+        },
+        "trained_last": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.7160423878371809,
+            "psnr_y_gap_to_teacher": 3.0442507035846376,
+            "ssim_y_gain_over_previous": 0.012793858608772135
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.4338182709294074,
+            "psnr_y_gap_to_teacher": 2.7355987938488155,
+            "ssim_y_gain_over_previous": 0.005639181462961829
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 1.280490621652735,
+            "psnr_y_gap_to_teacher": 3.661554523056296,
+            "ssim_y_gain_over_previous": 0.027103212900392748
+          }
+        }
+      }
+    },
+    "REDS": {
+      "windows": 376,
+      "scored_frames_per_model": 1128,
+      "batch_size": 1,
+      "seconds": 159.52968696597964,
+      "metrics": {
+        "bilinear": {
+          "all": {
+            "all": {
+              "psnr_rgb": 23.618720408890375,
+              "psnr_y": 25.00684641318998,
+              "ssim_y": 0.6790795100652179
+            },
+            "endpoints": {
+              "psnr_rgb": 25.63642990062409,
+              "psnr_y": 26.96981709890822,
+              "ssim_y": 0.7357227837141812
+            },
+            "center": {
+              "psnr_rgb": 19.583301425422942,
+              "psnr_y": 21.080905041753496,
+              "ssim_y": 0.5657929627672912
+            }
+          }
+        },
+        "initial": {
+          "all": {
+            "all": {
+              "psnr_rgb": 24.65919082818669,
+              "psnr_y": 26.052517740606344,
+              "ssim_y": 0.7189471385023859
+            },
+            "endpoints": {
+              "psnr_rgb": 27.208507509883436,
+              "psnr_y": 28.55707047102645,
+              "ssim_y": 0.7937514368839517
+            },
+            "center": {
+              "psnr_rgb": 19.560557464793195,
+              "psnr_y": 21.043412279766137,
+              "ssim_y": 0.5693385417392542
+            }
+          }
+        },
+        "teacher": {
+          "all": {
+            "all": {
+              "psnr_rgb": 26.653296881477914,
+              "psnr_y": 28.06006142934618,
+              "ssim_y": 0.7875997513353644
+            },
+            "endpoints": {
+              "psnr_rgb": 28.818215563805726,
+              "psnr_y": 30.1906475861368,
+              "ssim_y": 0.8443414316013378
+            },
+            "center": {
+              "psnr_rgb": 22.32345951682229,
+              "psnr_y": 23.79888911576494,
+              "ssim_y": 0.6741163908034178
+            }
+          }
+        },
+        "trained_best": {
+          "all": {
+            "all": {
+              "psnr_rgb": 25.31806816845669,
+              "psnr_y": 26.726490281305157,
+              "ssim_y": 0.7425065277391698
+            },
+            "endpoints": {
+              "psnr_rgb": 27.518149349060113,
+              "psnr_y": 28.86303654628493,
+              "ssim_y": 0.8036787094189698
+            },
+            "center": {
+              "psnr_rgb": 20.917905807249845,
+              "psnr_y": 22.453397751345616,
+              "ssim_y": 0.6201621643795696
+            }
+          }
+        },
+        "trained_last": {
+          "all": {
+            "all": {
+              "psnr_rgb": 25.320537885165848,
+              "psnr_y": 26.72908096897989,
+              "ssim_y": 0.7424939364531773
+            },
+            "endpoints": {
+              "psnr_rgb": 27.518305330675705,
+              "psnr_y": 28.863235319368325,
+              "ssim_y": 0.8036384435520423
+            },
+            "center": {
+              "psnr_rgb": 20.925002994146126,
+              "psnr_y": 22.460772268203016,
+              "ssim_y": 0.6202049222554475
+            }
+          }
+        }
+      },
+      "comparison": {
+        "trained_best": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.6739725406988128,
+            "psnr_y_gap_to_teacher": 1.333571148041024,
+            "ssim_y_gain_over_previous": 0.023559389236783912
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.30596607525848185,
+            "psnr_y_gap_to_teacher": 1.3276110398518703,
+            "ssim_y_gain_over_previous": 0.009927272535018128
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 1.4099854715794784,
+            "psnr_y_gap_to_teacher": 1.345491364419324,
+            "ssim_y_gain_over_previous": 0.05082362264031537
+          }
+        },
+        "trained_last": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.6765632283735457,
+            "psnr_y_gap_to_teacher": 1.3309804603662911,
+            "ssim_y_gain_over_previous": 0.023546797950791398
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.30616484834187574,
+            "psnr_y_gap_to_teacher": 1.3274122667684765,
+            "ssim_y_gain_over_previous": 0.009887006668090614
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 1.4173599884368784,
+            "psnr_y_gap_to_teacher": 1.338116847561924,
+            "ssim_y_gain_over_previous": 0.0508663805161933
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "pass": true,
+  "datasets": {
+    "vimeo": {
+      "rows": 218820,
+      "frames_per_model": 54705,
+      "unique_identities": 218820,
+      "all_metrics_finite": true,
+      "identical_model_frames": true,
+      "metrics_max_absolute_error": 0.0,
+      "comparison_max_absolute_error": 0.0
+    },
+    "vid4": {
+      "rows": 684,
+      "frames_per_model": 171,
+      "unique_identities": 684,
+      "all_metrics_finite": true,
+      "identical_model_frames": true,
+      "metrics_max_absolute_error": 0.0,
+      "comparison_max_absolute_error": 0.0
+    },
+    "reds": {
+      "rows": 4512,
+      "frames_per_model": 1128,
+      "unique_identities": 4512,
+      "all_metrics_finite": true,
+      "identical_model_frames": true,
+      "metrics_max_absolute_error": 0.0,
+      "comparison_max_absolute_error": 0.0
+    }
+  },
+  "checkpoints": {
+    "progressive": {
+      "sha256": "9cab58b90f66b2ae904f68902e65898d53015b788b347b24eb2c244a299983ef",
+      "parameters": 286140
+    },
+    "previous_tiny": {
+      "sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+      "parameters": 286140
+    },
+    "intermediate": {
+      "sha256": "882203dc99011eea7773d53abceb9c6e9707fc005430031f6a08323f01d9dbc8",
+      "parameters": 286140
+    },
+    "teacher": {
+      "sha256": "c18b45d025f4217b3fe13f9e853a46543707d79c58864c2fdfefc9071fb422da",
+      "parameters": 4485275
+    }
+  },
+  "history_comparison": {
+    "vimeo": {
+      "previous_tiny": {
+        "psnr_rgb": 7.263469115059706e-08,
+        "psnr_y": 7.778299959682045e-08,
+        "ssim_y": 3.165645967584396e-09
+      },
+      "intermediate": {
+        "psnr_rgb": 7.084502584575603e-08,
+        "psnr_y": 6.380456341048557e-08,
+        "ssim_y": 3.1731109961796733e-09
+      },
+      "teacher": {
+        "psnr_rgb": 0.0,
+        "psnr_y": 0.0,
+        "ssim_y": 0.0
+      }
+    },
+    "vid4": {
+      "previous_tiny": {
+        "psnr_rgb": 2.1829834782494117e-05,
+        "psnr_y": 2.6656894917209684e-05,
+        "ssim_y": 3.340218810654605e-06
+      },
+      "intermediate": {
+        "psnr_rgb": 8.862479287330416e-06,
+        "psnr_y": 1.047239256024568e-05,
+        "ssim_y": 1.8595151227707163e-06
+      },
+      "teacher": {
+        "psnr_rgb": 1.1013777019286408e-06,
+        "psnr_y": 6.763635482798236e-06,
+        "ssim_y": 1.4287445093685847e-07
+      }
+    },
+    "reds": {
+      "previous_tiny": {
+        "psnr_rgb": 0.00010283335920746595,
+        "psnr_y": 0.00010846844561385183,
+        "ssim_y": 2.213593169653194e-06
+      },
+      "intermediate": {
+        "psnr_rgb": 8.1595046079741e-05,
+        "psnr_y": 8.095450971978835e-05,
+        "ssim_y": 7.917615364450015e-07
+      },
+      "teacher": {
+        "psnr_rgb": 0.0,
+        "psnr_y": 0.0,
+        "ssim_y": 0.0
+      }
+    }
+  },
+  "total_frame_records": 224016,
+  "test_seconds": 749.1462395982817,
+  "fps_device": "NVIDIA GeForce RTX 5090",
+  "fps_protocol": "FP32; LR 144x180; batch 1; 10 warmups, 100 timed calls; model forward only; unique streaming FPS excludes the shared endpoint between calls.",
+  "status_complete": true
+}

@@ -1,0 +1,81 @@
+{
+  "pass": true,
+  "checkpoint_sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+  "parameters": 286140,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "input_shape": [
+    1,
+    2,
+    3,
+    540,
+    960
+  ],
+  "output_shape": [
+    1,
+    3,
+    3,
+    2160,
+    3840
+  ],
+  "input_video_source": "../tiny_mixed_200k_b16/demo_input_960x540_60fps.source.json",
+  "precisions": {
+    "fp32": {
+      "benchmark_file": "deployment_fp32.json",
+      "video_file": "demo_4k120_fp32.mp4",
+      "video_report": "demo_4k120_fp32.json",
+      "max_observed_peak_mib_across_benchmark_and_video": {
+        "peak_allocated_mib": 3637.76611328125,
+        "peak_reserved_mib": 5374.0,
+        "sampled_process_peak_mib": 5988.0
+      },
+      "max_observed_peak_gib": {
+        "peak_allocated_gib": 3.5525059700012207,
+        "peak_reserved_gib": 5.248046875,
+        "sampled_process_peak_gib": 5.84765625
+      },
+      "cuda_ms_per_pair": 247.6209716796875,
+      "model_only_unique_fps": 8.07686031774045,
+      "bounded_stream_to_host_rgb8_unique_fps": 5.331019409846559,
+      "video_elapsed_seconds": 28.26188629399985,
+      "video_encoded_frames_per_second": 4.246001089653971,
+      "verified_video": {
+        "width": 3840,
+        "height": 2160,
+        "fps": 120.0,
+        "container_frame_count": 120,
+        "decoded_frame_count": 120,
+        "duration_seconds": 1.0
+      }
+    },
+    "amp-fp16": {
+      "benchmark_file": "deployment_amp_fp16.json",
+      "video_file": "demo_4k120_amp_fp16.mp4",
+      "video_report": "demo_4k120_amp_fp16.json",
+      "max_observed_peak_mib_across_benchmark_and_video": {
+        "peak_allocated_mib": 2946.11962890625,
+        "peak_reserved_mib": 3970.0,
+        "sampled_process_peak_mib": 4586.0
+      },
+      "max_observed_peak_gib": {
+        "peak_allocated_gib": 2.8770699501037598,
+        "peak_reserved_gib": 3.876953125,
+        "sampled_process_peak_gib": 4.478515625
+      },
+      "cuda_ms_per_pair": 206.4166259765625,
+      "model_only_unique_fps": 9.689141998799503,
+      "bounded_stream_to_host_rgb8_unique_fps": 6.048024325023067,
+      "video_elapsed_seconds": 25.71196541376412,
+      "video_encoded_frames_per_second": 4.667087796242976,
+      "verified_video": {
+        "width": 3840,
+        "height": 2160,
+        "fps": 120.0,
+        "container_frame_count": 120,
+        "decoded_frame_count": 120,
+        "duration_seconds": 1.0
+      }
+    }
+  },
+  "memory_protocol": "Each precision and each benchmark/video run used a fresh process with only the final Tiny on the GPU. PyTorch allocated/reserved record exact allocator high-water marks; nvidia-smi process memory sampled every 0.1 s. Maximum above is observed across the independent inference and video measurements.",
+  "timing_protocol": "Pure-model CUDA pair timing excludes CPU video work. Video timing includes streaming inference, GPU-to-CPU RGB8 conversion and CPU decode/encode; output timestamp is 120fps. One final CPU frame is held to retain one-second duration."
+}

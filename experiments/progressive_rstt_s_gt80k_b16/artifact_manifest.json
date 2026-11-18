@@ -1,0 +1,176 @@
+{
+  "status": "complete",
+  "created_utc": "2026-11-17T02:19:57.948602+00:00",
+  "run": "RSTT-S progressive compression and GT recovery",
+  "total_optimizer_updates": 220000,
+  "selected_checkpoint_cumulative_step": 214000,
+  "parameters": 286140,
+  "test_csv_rows": 224016,
+  "source_snapshot_files": 24,
+  "files": {
+    "PROGRESSIVE_TRAINING.md": {
+      "bytes": 9652,
+      "sha256": "0a0a14b4a23149746112a7753fb087daf0c28ec2690dabdf3c60e387d22a4f8e"
+    },
+    "experiments/progressive_rstt_s_140k_b16/REPORT.md": {
+      "bytes": 28496,
+      "sha256": "bd5deabe45f9604937e67cb64f0e6f91e3973685d7764f24a9aa8273d8c4210c"
+    },
+    "experiments/progressive_rstt_s_140k_b16/stage_results.json": {
+      "bytes": 11943,
+      "sha256": "9a44e2c58d1f57834c4d198b5f2d0dcd99245a8eaef28618a2a8bbb9403aa4b6"
+    },
+    "experiments/progressive_rstt_s_140k_b16/training_audit.json": {
+      "bytes": 7459,
+      "sha256": "1faadd8a03981c8e300d319992e5420c0d7c86258e84d38c01266eddaed045f0"
+    },
+    "experiments/progressive_rstt_s_140k_b16/architecture_deployment_notes.json": {
+      "bytes": 28211,
+      "sha256": "34f2fe083e3f330587a5beb96184e90d4629250c9cc38c8c6898e5240388638f"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/final.pth": {
+      "bytes": 1602225,
+      "sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/final_manifest.json": {
+      "bytes": 1067,
+      "sha256": "1dcc0333b30f28e85089c93ac324eba9812a3c12dd81c05d0a5acee0c126d7fb"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/config.json": {
+      "bytes": 1577,
+      "sha256": "d744e3af5bdcdfa3c3744d7f0f722ea0d183062fdd1cd8d1ef2c3710eb7d6d23"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/training_summary.json": {
+      "bytes": 221,
+      "sha256": "399b78e70316de01b1fc16725c6c4a50a41dcc559f5d8e08c6c5e6d3877eee40"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/training_audit.json": {
+      "bytes": 1672,
+      "sha256": "ae7ad15cb1f8b047b7b94496a090f17b89963be0b6a72a750fb463fd0b2f3c18"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/source_invariance_audit.json": {
+      "bytes": 8667,
+      "sha256": "33501768640bfa6b2e7ac66ed2d87e928c8915c9cbf8028d01fbe0bf8a2cbba6"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation_audit.json": {
+      "bytes": 12532,
+      "sha256": "6381e879706a8cfec80b941db7e08e210b61c39c6582e733e50875dcbf5d9760"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/delivery_review.json": {
+      "bytes": 3354,
+      "sha256": "0f6c3f1250eef15e35883a474c2e0506bf0d5896ba1b9fee75aed47c67d99db7"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/deployment_summary.json": {
+      "bytes": 3037,
+      "sha256": "f3047673128b09b2f82f5ce898552d962893b043acd56bf5de5391f9c2d96a02"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/deployment_fp32.json": {
+      "bytes": 34548,
+      "sha256": "508f4c8bbc236ae0c4ad85306dc1bdbdb253b282a0be80bc6063505071373f5f"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/deployment_amp_fp16.json": {
+      "bytes": 34571,
+      "sha256": "c8b59bdf0ba17e62971da336b6a51f9b7d63893ea23d581726515ec25c3ab004"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/demo_4k120_fp32.json": {
+      "bytes": 1788,
+      "sha256": "10528c77ae8d5fd7cc3f32cc81480141a0de6d3cabe36e73b42d21774edbf18f"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/demo_4k120_amp_fp16.json": {
+      "bytes": 1797,
+      "sha256": "1ca7d464564d8a0c624fd50ff044e9cbe687d76bc8d0135fe0cdea5e58ec314a"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/demo_4k120_fp32.mp4": {
+      "bytes": 47276757,
+      "sha256": "cb2a9f9e5cbe90b5d045487136c2f610e7e6f235d76ef464c26273e188ed90e6"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/demo_4k120_amp_fp16.mp4": {
+      "bytes": 47279474,
+      "sha256": "bc6c6b7f2f17fd7ecb44d79540aa15cd94a604a540f68e2cf25c420d51f430fc"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/runtime_versions.json": {
+      "bytes": 224,
+      "sha256": "76c56ec2c135f5fbfc9215159e60350d2a873d263982235d0ad7797abed91510"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/unit_tests.log": {
+      "bytes": 722,
+      "sha256": "3d43ef9c80a6c418a216abbec03292b26a1da036f83389c83264d060855d506c"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/source_snapshot/manifest.json": {
+      "bytes": 2569,
+      "sha256": "74927142be92c894de48fb151f3ca5c75fa1ae8abfb7bc04748e2252172f3cb3"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/fps.json": {
+      "bytes": 1513,
+      "sha256": "9a453ad43d99608b4f6a8bda639d60b1224779c6d3d3088b258df8ec48b38fa5"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/reds/results.json": {
+      "bytes": 6866,
+      "sha256": "ae423133975b39f05f05e6ba691a5e930d6ffa64878ff819a82a47fd27c80dc6"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/reds/test_ids.json": {
+      "bytes": 8651,
+      "sha256": "66f62800883ae34f204c88a70c1549967c8c9794a30176293b09141f4491fc89"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/results.json": {
+      "bytes": 48949,
+      "sha256": "3bcf01367404dedbb5279fb1ecf30a01fb07e9f2466d333e7df0c9918cb1d7f9"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/vid4/results.json": {
+      "bytes": 18922,
+      "sha256": "1ce4aa855ecf43cd838ee7a1746e2f8130a8f8f0bef98751290d9bd88373ead6"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/vimeo/results.json": {
+      "bytes": 13503,
+      "sha256": "3de9c42f2898315fa6da28ec562977175fa22aef1cd754ba203b2055816c7454"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/vimeo/test_ids.json": {
+      "bytes": 125043,
+      "sha256": "3c3901c3939eb50c3ba97c842476866d3aa4986e4b805ea34a932e14e65cbf3b"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/reds/frames.csv": {
+      "bytes": 490284,
+      "sha256": "ee3976beec6785089fe4fa37038db9ee71953d2cd3bc8fd27f8daf11848a351e"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/vid4/frames.csv": {
+      "bytes": 67448,
+      "sha256": "33b7d9b860c179c2a6cc509808a4e704a70c447e9641f326747364d9d78e1db1"
+    },
+    "experiments/progressive_rstt_s_gt80k_b16/evaluation/vimeo/frames.csv": {
+      "bytes": 21983679,
+      "sha256": "20825991fa44b869f958a5376e80c46b41a2853fd421ec2a59e9984c6f59a640"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/extension_validation_curves.png": {
+      "bytes": 202657,
+      "sha256": "72a965a77d4df2bfad1f1eb31b2f2d12ff8b6b1a8ec8283d34cfc3f43891d3ae"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/final_test_comparison.png": {
+      "bytes": 94084,
+      "sha256": "481c4d970584030fb40a537dbdc7cfb5b25c1325e35f03f25aae30a3be07a558"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/surgery_recovery.png": {
+      "bytes": 116805,
+      "sha256": "3a936e270c998369ec8d0c514db70329de56c7e63a7c9104d96d625e52b65c6b"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/validation_curves.png": {
+      "bytes": 208715,
+      "sha256": "e19aa8c4eeec56cc0d9f5838cc17d972a0a0e5113e8ebc66e88c35290d090546"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/extension_validation_curves.pdf": {
+      "bytes": 20189,
+      "sha256": "d35b7c41c005e0965af1b9ac63c95de36bca42cef318332ca2c2fcd664005ef4"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/final_test_comparison.pdf": {
+      "bytes": 16352,
+      "sha256": "0a588c357f056959c38c06e61476ec45d0cdaf19ec604e502a114a878f934408"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/surgery_recovery.pdf": {
+      "bytes": 17499,
+      "sha256": "56dbbab7e9f1f1e311947f8e12606629d27fdde0ac9e1fade19220f2c835d35e"
+    },
+    "experiments/progressive_rstt_s_140k_b16/figures/validation_curves.pdf": {
+      "bytes": 34286,
+      "sha256": "d3a997b66c067666d379d212d18bbfa219fd7979682fcc0442fdcd7f02919588"
+    }
+  }
+}

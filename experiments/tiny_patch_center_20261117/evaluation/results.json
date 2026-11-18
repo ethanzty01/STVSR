@@ -1,0 +1,1414 @@
+{
+  "checkpoints": {
+    "progressive": {
+      "path": "/home/tyzheng/RSTT/experiments/tiny_patch_center_20261117/final.pth",
+      "sha256": "9cab58b90f66b2ae904f68902e65898d53015b788b347b24eb2c244a299983ef",
+      "step": 52000,
+      "cumulative_step": 286000,
+      "validation_psnr_y": {
+        "vimeo": 33.18707997827247,
+        "reds": 25.536135597148036,
+        "balanced_mean": 29.361607787710255
+      },
+      "model_config": {
+        "embed_dim": 32,
+        "depth": 2,
+        "drop_path_rate": 0.0,
+        "head": "direct"
+      },
+      "parameters": 286140
+    },
+    "previous_tiny": {
+      "path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/final.pth",
+      "sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+      "step": 74000,
+      "cumulative_step": 214000,
+      "validation_psnr_y": {
+        "vimeo": 33.14001868682518,
+        "reds": 25.518034728220698,
+        "balanced_mean": 29.32902670752294
+      },
+      "model_config": {
+        "embed_dim": 32,
+        "depth": 2,
+        "drop_path_rate": 0.0,
+        "head": "direct"
+      },
+      "parameters": 286140
+    },
+    "intermediate": {
+      "path": "/home/tyzheng/RSTT/experiments/tiny_mixed_200k_b16/distilled_best.pth",
+      "sha256": "882203dc99011eea7773d53abceb9c6e9707fc005430031f6a08323f01d9dbc8",
+      "step": 198000,
+      "cumulative_step": 218000,
+      "validation_psnr_y": {
+        "vimeo": 32.98898804780025,
+        "reds": 25.4250934985173,
+        "balanced_mean": 29.207040773158774
+      },
+      "model_config": {
+        "embed_dim": 32,
+        "depth": 2,
+        "drop_path_rate": 0.0,
+        "head": "direct"
+      },
+      "parameters": 286140
+    },
+    "teacher": {
+      "path": "/home/tyzheng/RSTT/checkpoints/RSTT-S/f96d4w4h24816Ushape0res_1690000.pth",
+      "sha256": "c18b45d025f4217b3fe13f9e853a46543707d79c58864c2fdfefc9071fb422da",
+      "parameters": 4485275
+    }
+  },
+  "smoke_limit": null,
+  "datasets": {
+    "vimeo": {
+      "clips": 7815,
+      "frames_per_model": 54705,
+      "batch_size": 4,
+      "seconds": 604.7229794934392,
+      "metrics": {
+        "intermediate": {
+          "all": {
+            "all": {
+              "psnr_rgb": 30.451793638483434,
+              "psnr_y": 32.11664548915873,
+              "ssim_y": 0.887818048523024
+            },
+            "endpoints": {
+              "psnr_rgb": 31.944190572019554,
+              "psnr_y": 33.63626385374066,
+              "ssim_y": 0.9051253139647087
+            },
+            "center": {
+              "psnr_rgb": 28.461931060435276,
+              "psnr_y": 30.090487669716172,
+              "ssim_y": 0.8647416946007775
+            }
+          },
+          "groups": {
+            "fast": {
+              "all": {
+                "psnr_rgb": 31.33477892665194,
+                "psnr_y": 33.09767821249062,
+                "ssim_y": 0.8905838686156197
+              },
+              "endpoints": {
+                "psnr_rgb": 34.72146043405245,
+                "psnr_y": 36.559713475917675,
+                "ssim_y": 0.930987068360137
+              },
+              "center": {
+                "psnr_rgb": 26.819203583451262,
+                "psnr_y": 28.481631194587884,
+                "ssim_y": 0.8367129356229303
+              }
+            },
+            "medium": {
+              "all": {
+                "psnr_rgb": 30.63382417969401,
+                "psnr_y": 32.300519077615796,
+                "ssim_y": 0.8926393873286843
+              },
+              "endpoints": {
+                "psnr_rgb": 31.977521158482148,
+                "psnr_y": 33.66886704535605,
+                "ssim_y": 0.9079287929517499
+              },
+              "center": {
+                "psnr_rgb": 28.842228207976486,
+                "psnr_y": 30.4760551206288,
+                "ssim_y": 0.8722535131645969
+              }
+            },
+            "slow": {
+              "all": {
+                "psnr_rgb": 29.21954132502314,
+                "psnr_y": 30.804243793044414,
+                "ssim_y": 0.8708410287777039
+              },
+              "endpoints": {
+                "psnr_rgb": 29.73213731113014,
+                "psnr_y": 31.315438142744572,
+                "ssim_y": 0.8768342017186437
+              },
+              "center": {
+                "psnr_rgb": 28.536080010213833,
+                "psnr_y": 30.122651326777536,
+                "ssim_y": 0.8628501315231178
+              }
+            }
+          }
+        },
+        "previous_tiny": {
+          "all": {
+            "all": {
+              "psnr_rgb": 30.633971390156436,
+              "psnr_y": 32.31973759475185,
+              "ssim_y": 0.8915251628123969
+            },
+            "endpoints": {
+              "psnr_rgb": 32.030347006672294,
+              "psnr_y": 33.737680598317475,
+              "ssim_y": 0.9066464456413348
+            },
+            "center": {
+              "psnr_rgb": 28.77213723480196,
+              "psnr_y": 30.429146923331007,
+              "ssim_y": 0.8713634523738131
+            }
+          },
+          "groups": {
+            "fast": {
+              "all": {
+                "psnr_rgb": 31.659953590623672,
+                "psnr_y": 33.44072081055601,
+                "ssim_y": 0.8972463246029696
+              },
+              "endpoints": {
+                "psnr_rgb": 34.756532539765814,
+                "psnr_y": 36.60800354524703,
+                "ssim_y": 0.9314682600984414
+              },
+              "center": {
+                "psnr_rgb": 27.531181658434154,
+                "psnr_y": 29.21767716430132,
+                "ssim_y": 0.851617077275674
+              }
+            },
+            "medium": {
+              "all": {
+                "psnr_rgb": 30.807272294157116,
+                "psnr_y": 32.49683114546842,
+                "ssim_y": 0.8961490556595069
+              },
+              "endpoints": {
+                "psnr_rgb": 32.07758365224561,
+                "psnr_y": 33.7853186609339,
+                "ssim_y": 0.9096305789199522
+              },
+              "center": {
+                "psnr_rgb": 29.1135238167058,
+                "psnr_y": 30.778847791514437,
+                "ssim_y": 0.8781736913122463
+              }
+            },
+            "slow": {
+              "all": {
+                "psnr_rgb": 29.320055212361176,
+                "psnr_y": 30.9219700552128,
+                "ssim_y": 0.8729129260526214
+              },
+              "endpoints": {
+                "psnr_rgb": 29.814182057473328,
+                "psnr_y": 31.41081125694695,
+                "ssim_y": 0.8785877016626402
+              },
+              "center": {
+                "psnr_rgb": 28.661219418878307,
+                "psnr_y": 30.270181786233934,
+                "ssim_y": 0.8653465585725966
+              }
+            }
+          }
+        },
+        "progressive": {
+          "all": {
+            "all": {
+              "psnr_rgb": 30.67890131548722,
+              "psnr_y": 32.364609250590256,
+              "ssim_y": 0.8922589441288624
+            },
+            "endpoints": {
+              "psnr_rgb": 32.069676558347695,
+              "psnr_y": 33.77737964110266,
+              "ssim_y": 0.9071231628458574
+            },
+            "center": {
+              "psnr_rgb": 28.824534325006578,
+              "psnr_y": 30.4809153965737,
+              "ssim_y": 0.872439985839536
+            }
+          },
+          "groups": {
+            "fast": {
+              "all": {
+                "psnr_rgb": 31.715938597205746,
+                "psnr_y": 33.49794599103778,
+                "ssim_y": 0.8981370667687295
+              },
+              "endpoints": {
+                "psnr_rgb": 34.798006667812054,
+                "psnr_y": 36.65119098160193,
+                "ssim_y": 0.9317941922123071
+              },
+              "center": {
+                "psnr_rgb": 27.606514503064,
+                "psnr_y": 29.29361933695226,
+                "ssim_y": 0.8532608995106264
+              }
+            },
+            "medium": {
+              "all": {
+                "psnr_rgb": 30.852522004430924,
+                "psnr_y": 32.54187328678666,
+                "ssim_y": 0.8968761140057142
+              },
+              "endpoints": {
+                "psnr_rgb": 32.11805351688282,
+                "psnr_y": 33.82603198583219,
+                "ssim_y": 0.9101165251395821
+              },
+              "center": {
+                "psnr_rgb": 29.16514665449506,
+                "psnr_y": 30.829661688059293,
+                "ssim_y": 0.8792222324938905
+              }
+            },
+            "slow": {
+              "all": {
+                "psnr_rgb": 29.355602593244186,
+                "psnr_y": 30.956933729698896,
+                "ssim_y": 0.8735482468499239
+              },
+              "endpoints": {
+                "psnr_rgb": 29.848364402908675,
+                "psnr_y": 31.444731400662217,
+                "ssim_y": 0.8791504566401737
+              },
+              "center": {
+                "psnr_rgb": 28.69858684702487,
+                "psnr_y": 30.306536835081133,
+                "ssim_y": 0.8660786337962577
+              }
+            }
+          }
+        },
+        "teacher": {
+          "all": {
+            "all": {
+              "psnr_rgb": 33.37105466706007,
+              "psnr_y": 35.08610442873002,
+              "ssim_y": 0.9306590735841721
+            },
+            "endpoints": {
+              "psnr_rgb": 34.50157270321189,
+              "psnr_y": 36.24594391835578,
+              "ssim_y": 0.9368260864374014
+            },
+            "center": {
+              "psnr_rgb": 31.863697285524317,
+              "psnr_y": 33.53965177589567,
+              "ssim_y": 0.9224363897798664
+            }
+          },
+          "groups": {
+            "fast": {
+              "all": {
+                "psnr_rgb": 34.69093134014539,
+                "psnr_y": 36.524853216386006,
+                "ssim_y": 0.9376239100927839
+              },
+              "endpoints": {
+                "psnr_rgb": 36.96805282763801,
+                "psnr_y": 38.890185179411496,
+                "ssim_y": 0.9503695094271639
+              },
+              "center": {
+                "psnr_rgb": 31.65476935682188,
+                "psnr_y": 33.37107726568534,
+                "ssim_y": 0.920629777646944
+              }
+            },
+            "medium": {
+              "all": {
+                "psnr_rgb": 33.59923651277704,
+                "psnr_y": 35.321046618323635,
+                "ssim_y": 0.9347881805276551
+              },
+              "endpoints": {
+                "psnr_rgb": 34.6811319899964,
+                "psnr_y": 36.4297645105756,
+                "ssim_y": 0.9405471347233725
+              },
+              "center": {
+                "psnr_rgb": 32.15670920981788,
+                "psnr_y": 33.84275609532099,
+                "ssim_y": 0.9271095749333653
+              }
+            },
+            "slow": {
+              "all": {
+                "psnr_rgb": 31.664600872476782,
+                "psnr_y": 33.26851326785835,
+                "ssim_y": 0.9126290115998177
+              },
+              "endpoints": {
+                "psnr_rgb": 32.0743534082655,
+                "psnr_y": 33.67057464850372,
+                "ssim_y": 0.9150589751654009
+              },
+              "center": {
+                "psnr_rgb": 31.118264158091833,
+                "psnr_y": 32.73243142699787,
+                "ssim_y": 0.9093890601790395
+              }
+            }
+          }
+        }
+      },
+      "comparison": {
+        "all": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.044871655838406355,
+            "psnr_y_gap_to_teacher": 2.7214951781397616,
+            "ssim_y_gain_over_previous": 0.0007337813164655094,
+            "ssim_y_gap_to_teacher": 0.038400129455309684,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.22710767700378653,
+              "psnr_y": 0.24796376143152798,
+              "ssim_y": 0.00444089560583838
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.039699042785187544,
+            "psnr_y_gap_to_teacher": 2.4685642772531153,
+            "ssim_y_gain_over_previous": 0.00047671720452258093,
+            "ssim_y_gap_to_teacher": 0.029702923591544028,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.12548598632814034,
+              "psnr_y": 0.14111578736200414,
+              "ssim_y": 0.001997848881148623
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.05176847324269218,
+            "psnr_y_gap_to_teacher": 3.058736379321971,
+            "ssim_y_gain_over_previous": 0.0010765334657228953,
+            "ssim_y_gap_to_teacher": 0.04999640394033045,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.36260326457130176,
+              "psnr_y": 0.3904277268575278,
+              "ssim_y": 0.007698291238758426
+            }
+          }
+        },
+        "fast": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.0572251804817725,
+            "psnr_y_gap_to_teacher": 3.026907225348225,
+            "ssim_y_gain_over_previous": 0.0008907421657599057,
+            "ssim_y_gap_to_teacher": 0.03948684332405439,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.3811596705538065,
+              "psnr_y": 0.40026777854716045,
+              "ssim_y": 0.007553198153109841
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.04318743635489852,
+            "psnr_y_gap_to_teacher": 2.2389941978095678,
+            "ssim_y_gain_over_previous": 0.0003259321138656679,
+            "ssim_y_gap_to_teacher": 0.018575317214856835,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.07654623375960057,
+              "psnr_y": 0.09147750568425295,
+              "ssim_y": 0.0008071238521700774
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.07594217265094017,
+            "psnr_y_gap_to_teacher": 4.077457928733075,
+            "ssim_y_gain_over_previous": 0.0016438222349524079,
+            "ssim_y_gap_to_teacher": 0.06736887813631753,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.7873109196127359,
+              "psnr_y": 0.8119881423643776,
+              "ssim_y": 0.016547963887696193
+            }
+          }
+        },
+        "medium": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.045042141318241136,
+            "psnr_y_gap_to_teacher": 2.779173331536974,
+            "ssim_y_gain_over_previous": 0.0007270583462073432,
+            "ssim_y_gap_to_teacher": 0.0379120665219409,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.21869782473691401,
+              "psnr_y": 0.24135420917086492,
+              "ssim_y": 0.004236726677029901
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.0407133248982845,
+            "psnr_y_gap_to_teacher": 2.603732524743414,
+            "ssim_y_gain_over_previous": 0.0004859462196298292,
+            "ssim_y_gap_to_teacher": 0.030430609583790402,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.14053235840066947,
+              "psnr_y": 0.15716494047613594,
+              "ssim_y": 0.002187732187832192
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.05081389654485591,
+            "psnr_y_gap_to_teacher": 3.0130944072617005,
+            "ssim_y_gain_over_previous": 0.0010485411816442136,
+            "ssim_y_gap_to_teacher": 0.04788734243947479,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.3229184465185746,
+              "psnr_y": 0.3536065674304929,
+              "ssim_y": 0.00696871932929366
+            }
+          }
+        },
+        "slow": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.03496367448609661,
+            "psnr_y_gap_to_teacher": 2.3115795381594566,
+            "ssim_y_gain_over_previous": 0.0006353207973025521,
+            "ssim_y_gap_to_teacher": 0.03908076474989375,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.13606126822104514,
+              "psnr_y": 0.1526899366544825,
+              "ssim_y": 0.0027072180722200745
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.033920143715267415,
+            "psnr_y_gap_to_teacher": 2.2258432478414996,
+            "ssim_y_gain_over_previous": 0.0005627549775334417,
+            "ssim_y_gap_to_teacher": 0.03590851852522725,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.11622709177853707,
+              "psnr_y": 0.12929325791764512,
+              "ssim_y": 0.002316254921529981
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.036355048847198645,
+            "psnr_y_gap_to_teacher": 2.4258945919167374,
+            "ssim_y_gain_over_previous": 0.0007320752236611439,
+            "ssim_y_gap_to_teacher": 0.04331042638278182,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.16250683681103695,
+              "psnr_y": 0.18388550830359662,
+              "ssim_y": 0.003228502273139866
+            }
+          }
+        }
+      }
+    },
+    "vid4": {
+      "frames_per_sequence": {
+        "calendar": 41,
+        "city": 34,
+        "foliage": 49,
+        "walk": 47
+      },
+      "frames_per_model": 171,
+      "seconds": 10.36090731061995,
+      "metrics": {
+        "intermediate": {
+          "all": {
+            "all": {
+              "psnr_rgb": 23.074225026443514,
+              "psnr_y": 24.53358135704275,
+              "ssim_y": 0.7017981739760067
+            },
+            "endpoints": {
+              "psnr_rgb": 23.521397637758433,
+              "psnr_y": 24.960955480674503,
+              "ssim_y": 0.7132603057652273
+            },
+            "center": {
+              "psnr_rgb": 22.60011430601324,
+              "psnr_y": 24.08046180427655,
+              "ssim_y": 0.6896455523199657
+            }
+          },
+          "groups": {
+            "calendar": {
+              "all": {
+                "psnr_rgb": 19.90385920137398,
+                "psnr_y": 21.48392668194453,
+                "ssim_y": 0.6668620201139112
+              },
+              "endpoints": {
+                "psnr_rgb": 19.939864188289437,
+                "psnr_y": 21.50948760228737,
+                "ssim_y": 0.6702351305690053
+              },
+              "center": {
+                "psnr_rgb": 19.86605396511275,
+                "psnr_y": 21.45708771558455,
+                "ssim_y": 0.6633202541360622
+              }
+            },
+            "city": {
+              "all": {
+                "psnr_rgb": 24.37231580790404,
+                "psnr_y": 25.870707081300598,
+                "ssim_y": 0.6655570993087236
+              },
+              "endpoints": {
+                "psnr_rgb": 24.416193509386133,
+                "psnr_y": 25.904867161398883,
+                "ssim_y": 0.6716222599451497
+              },
+              "center": {
+                "psnr_rgb": 24.322953393736686,
+                "psnr_y": 25.832276991190017,
+                "ssim_y": 0.6587337935927448
+              }
+            },
+            "foliage": {
+              "all": {
+                "psnr_rgb": 22.782029221723224,
+                "psnr_y": 24.18357675832594,
+                "ssim_y": 0.6328450933754999
+              },
+              "endpoints": {
+                "psnr_rgb": 22.97406272420744,
+                "psnr_y": 24.358918113722265,
+                "ssim_y": 0.6451792199726577
+              },
+              "center": {
+                "psnr_rgb": 22.581994323302165,
+                "psnr_y": 24.000929513121424,
+                "ssim_y": 0.619997044836794
+              }
+            },
+            "walk": {
+              "all": {
+                "psnr_rgb": 25.205448573028352,
+                "psnr_y": 26.59153438664666,
+                "ssim_y": 0.8303785951772483
+              },
+              "endpoints": {
+                "psnr_rgb": 26.554283037271983,
+                "psnr_y": 27.90017837096188,
+                "ssim_y": 0.8530536661275727
+              },
+              "center": {
+                "psnr_rgb": 23.79796913207848,
+                "psnr_y": 25.225992837796007,
+                "ssim_y": 0.8067176515769104
+              }
+            }
+          },
+          "equal_sequence_mean": {
+            "all": {
+              "psnr_rgb": 23.065913201007398,
+              "psnr_y": 24.532436227054433,
+              "ssim_y": 0.6989107019938458
+            },
+            "endpoints": {
+              "psnr_rgb": 23.47110086478875,
+              "psnr_y": 24.9183628120926,
+              "ssim_y": 0.7100225691535963
+            },
+            "center": {
+              "psnr_rgb": 22.64224270355752,
+              "psnr_y": 24.129071764422996,
+              "ssim_y": 0.6871921860356278
+            }
+          }
+        },
+        "previous_tiny": {
+          "all": {
+            "all": {
+              "psnr_rgb": 23.15067230781373,
+              "psnr_y": 24.614788795256253,
+              "ssim_y": 0.705931503107491
+            },
+            "endpoints": {
+              "psnr_rgb": 23.61444892219795,
+              "psnr_y": 25.053487789783368,
+              "ssim_y": 0.7183796321774397
+            },
+            "center": {
+              "psnr_rgb": 22.658957343165405,
+              "psnr_y": 24.14966215045642,
+              "ssim_y": 0.6927334867441719
+            }
+          },
+          "groups": {
+            "calendar": {
+              "all": {
+                "psnr_rgb": 19.997211067617883,
+                "psnr_y": 21.585394017687303,
+                "ssim_y": 0.6733477352295072
+              },
+              "endpoints": {
+                "psnr_rgb": 20.065264454504973,
+                "psnr_y": 21.640378949381333,
+                "ssim_y": 0.6787195146804044
+              },
+              "center": {
+                "psnr_rgb": 19.925755011386435,
+                "psnr_y": 21.527659839408564,
+                "ssim_y": 0.6677073668060653
+              }
+            },
+            "city": {
+              "all": {
+                "psnr_rgb": 24.412995009562277,
+                "psnr_y": 25.91237080649879,
+                "ssim_y": 0.6698861111556127
+              },
+              "endpoints": {
+                "psnr_rgb": 24.488894613662282,
+                "psnr_y": 25.97727582263188,
+                "ssim_y": 0.6777799933999934
+              },
+              "center": {
+                "psnr_rgb": 24.327607954949773,
+                "psnr_y": 25.83935266334906,
+                "ssim_y": 0.6610054936306843
+              }
+            },
+            "foliage": {
+              "all": {
+                "psnr_rgb": 22.793344577387582,
+                "psnr_y": 24.197745585298424,
+                "ssim_y": 0.6344666970643531
+              },
+              "endpoints": {
+                "psnr_rgb": 23.034087972339748,
+                "psnr_y": 24.413318535019645,
+                "ssim_y": 0.6487183487508449
+              },
+              "center": {
+                "psnr_rgb": 22.54257020764574,
+                "psnr_y": 23.97319042933883,
+                "ssim_y": 0.6196212265575909
+              }
+            },
+            "walk": {
+              "all": {
+                "psnr_rgb": 25.360927579717156,
+                "psnr_y": 26.753565705596994,
+                "ssim_y": 0.8349368925856814
+              },
+              "endpoints": {
+                "psnr_rgb": 26.668693718933365,
+                "psnr_y": 28.013959974210973,
+                "ssim_y": 0.8560958009731335
+              },
+              "center": {
+                "psnr_rgb": 23.996302043143736,
+                "psnr_y": 25.438371686173696,
+                "ssim_y": 0.812858031659645
+              }
+            }
+          },
+          "equal_sequence_mean": {
+            "all": {
+              "psnr_rgb": 23.141119558571226,
+              "psnr_y": 24.612269028770378,
+              "ssim_y": 0.7031593590087886
+            },
+            "endpoints": {
+              "psnr_rgb": 23.564235189860092,
+              "psnr_y": 25.011233320310957,
+              "ssim_y": 0.715328414451094
+            },
+            "center": {
+              "psnr_rgb": 22.698058804281423,
+              "psnr_y": 24.194643654567535,
+              "ssim_y": 0.6902980296634964
+            }
+          }
+        },
+        "progressive": {
+          "all": {
+            "all": {
+              "psnr_rgb": 23.175723784051407,
+              "psnr_y": 24.639581412043135,
+              "ssim_y": 0.7072957023890911
+            },
+            "endpoints": {
+              "psnr_rgb": 23.634637108346137,
+              "psnr_y": 25.073398816518658,
+              "ssim_y": 0.7193804969887615
+            },
+            "center": {
+              "psnr_rgb": 22.689165078775066,
+              "psnr_y": 24.17963042898473,
+              "ssim_y": 0.6944829081147421
+            }
+          },
+          "groups": {
+            "calendar": {
+              "all": {
+                "psnr_rgb": 20.027948224996624,
+                "psnr_y": 21.615979786159276,
+                "ssim_y": 0.6752550603112006
+              },
+              "endpoints": {
+                "psnr_rgb": 20.09330644379288,
+                "psnr_y": 21.668653681644205,
+                "ssim_y": 0.6805220233947121
+              },
+              "center": {
+                "psnr_rgb": 19.959322095260557,
+                "psnr_y": 21.5606721959001,
+                "ssim_y": 0.6697247490735136
+              }
+            },
+            "city": {
+              "all": {
+                "psnr_rgb": 24.428035072253547,
+                "psnr_y": 25.927234123300504,
+                "ssim_y": 0.671306443313124
+              },
+              "endpoints": {
+                "psnr_rgb": 24.499281102923742,
+                "psnr_y": 25.98738359305357,
+                "ssim_y": 0.6787213431889726
+              },
+              "center": {
+                "psnr_rgb": 24.34788328774956,
+                "psnr_y": 25.85956596982831,
+                "ssim_y": 0.6629646809527945
+              }
+            },
+            "foliage": {
+              "all": {
+                "psnr_rgb": 22.812384001428228,
+                "psnr_y": 24.21637941454537,
+                "ssim_y": 0.6356510920778117
+              },
+              "endpoints": {
+                "psnr_rgb": 23.04752146368102,
+                "psnr_y": 24.42635939711502,
+                "ssim_y": 0.6493771530068266
+              },
+              "center": {
+                "psnr_rgb": 22.567449144914907,
+                "psnr_y": 23.997650266035308,
+                "ssim_y": 0.6213531119434209
+              }
+            },
+            "walk": {
+              "all": {
+                "psnr_rgb": 25.39452938981544,
+                "psnr_y": 26.786908483444773,
+                "ssim_y": 0.8359741500280081
+              },
+              "endpoints": {
+                "psnr_rgb": 26.69639724042321,
+                "psnr_y": 28.04106162234476,
+                "ssim_y": 0.8567961767145782
+              },
+              "center": {
+                "psnr_rgb": 24.036058589181238,
+                "psnr_y": 25.478226947201314,
+                "ssim_y": 0.8142468178333268
+              }
+            }
+          },
+          "equal_sequence_mean": {
+            "all": {
+              "psnr_rgb": 23.16572417212346,
+              "psnr_y": 24.636625451862482,
+              "ssim_y": 0.704546686432536
+            },
+            "endpoints": {
+              "psnr_rgb": 23.58412656270521,
+              "psnr_y": 25.03086457353939,
+              "ssim_y": 0.7163541740762724
+            },
+            "center": {
+              "psnr_rgb": 22.727678279276564,
+              "psnr_y": 24.224028844741255,
+              "ssim_y": 0.6920723399507639
+            }
+          }
+        },
+        "teacher": {
+          "all": {
+            "all": {
+              "psnr_rgb": 24.777161346221092,
+              "psnr_y": 26.29434094814586,
+              "ssim_y": 0.7951102083335008
+            },
+            "endpoints": {
+              "psnr_rgb": 25.205249772919284,
+              "psnr_y": 26.70295972434241,
+              "ssim_y": 0.8000646936784395
+            },
+            "center": {
+              "psnr_rgb": 24.323284460083258,
+              "psnr_y": 25.861106583021797,
+              "ssim_y": 0.7898572600159752
+            }
+          },
+          "groups": {
+            "calendar": {
+              "all": {
+                "psnr_rgb": 21.716400744839788,
+                "psnr_y": 23.446432061311825,
+                "ssim_y": 0.7880127453088359
+              },
+              "endpoints": {
+                "psnr_rgb": 21.75944869325636,
+                "psnr_y": 23.476868519883777,
+                "ssim_y": 0.7892606999082691
+              },
+              "center": {
+                "psnr_rgb": 21.671200399002387,
+                "psnr_y": 23.41447377981128,
+                "ssim_y": 0.786702392979431
+              }
+            },
+            "city": {
+              "all": {
+                "psnr_rgb": 25.74485706185532,
+                "psnr_y": 27.279582906510626,
+                "ssim_y": 0.7737230251913595
+              },
+              "endpoints": {
+                "psnr_rgb": 25.770448496348926,
+                "psnr_y": 27.29305313910305,
+                "ssim_y": 0.7761002707894701
+              },
+              "center": {
+                "psnr_rgb": 25.716066698050017,
+                "psnr_y": 27.264428894844148,
+                "ssim_y": 0.7710486238934853
+              }
+            },
+            "foliage": {
+              "all": {
+                "psnr_rgb": 24.164197419191943,
+                "psnr_y": 25.583441389129373,
+                "ssim_y": 0.7244775965550136
+              },
+              "endpoints": {
+                "psnr_rgb": 24.30345649752945,
+                "psnr_y": 25.71004727909201,
+                "ssim_y": 0.7290532249710451
+              },
+              "center": {
+                "psnr_rgb": 24.01913587925704,
+                "psnr_y": 25.45156025375162,
+                "ssim_y": 0.7197113169549807
+              }
+            },
+            "walk": {
+              "all": {
+                "psnr_rgb": 27.38619885152957,
+                "psnr_y": 28.807109377243748,
+                "ssim_y": 0.8904114463758399
+              },
+              "endpoints": {
+                "psnr_rgb": 28.735794670249856,
+                "psnr_y": 30.11750326430909,
+                "ssim_y": 0.9014617852976016
+              },
+              "center": {
+                "psnr_rgb": 25.97792495373449,
+                "psnr_y": 27.439741842914717,
+                "ssim_y": 0.8788806579357404
+              }
+            }
+          },
+          "equal_sequence_mean": {
+            "all": {
+              "psnr_rgb": 24.752913519354156,
+              "psnr_y": 26.279141433548894,
+              "ssim_y": 0.7941562033577623
+            },
+            "endpoints": {
+              "psnr_rgb": 25.142287089346148,
+              "psnr_y": 26.649368050596983,
+              "ssim_y": 0.7989689952415964
+            },
+            "center": {
+              "psnr_rgb": 24.34608198251098,
+              "psnr_y": 25.892551192830442,
+              "ssim_y": 0.7890857479409092
+            }
+          }
+        }
+      },
+      "comparison": {
+        "all": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.024356423092104507,
+            "psnr_y_gap_to_teacher": 1.6425159816864117,
+            "ssim_y_gain_over_previous": 0.0013873274237474753,
+            "ssim_y_gap_to_teacher": 0.08960951692522623,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.09981097111606374,
+              "psnr_y": 0.10418922480804937,
+              "ssim_y": 0.005635984438690289
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.0196312532284324,
+            "psnr_y_gap_to_teacher": 1.618503477057594,
+            "ssim_y_gain_over_previous": 0.0010257596251784795,
+            "ssim_y_gap_to_teacher": 0.08261482116532393,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.11302569791646278,
+              "psnr_y": 0.11250176144679003,
+              "ssim_y": 0.006331604922676148
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.029385190173719877,
+            "psnr_y_gap_to_teacher": 1.668522348089187,
+            "ssim_y_gain_over_previous": 0.0017743102872674887,
+            "ssim_y_gap_to_teacher": 0.09701340799014535,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.08543557571904259,
+              "psnr_y": 0.09495708031825956,
+              "ssim_y": 0.004880153915136076
+            }
+          }
+        },
+        "calendar": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.030585768471972585,
+            "psnr_y_gap_to_teacher": 1.830452275152549,
+            "ssim_y_gain_over_previous": 0.001907325081693445,
+            "ssim_y_gap_to_teacher": 0.11275768499763528,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.12408902362264485,
+              "psnr_y": 0.13205310421474437,
+              "ssim_y": 0.00839304019728948
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.02827473226287225,
+            "psnr_y_gap_to_teacher": 1.8082148382395715,
+            "ssim_y_gain_over_previous": 0.00180250871430776,
+            "ssim_y_gap_to_teacher": 0.10873867651355695,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.15344225550344248,
+              "psnr_y": 0.15916607935683658,
+              "ssim_y": 0.010286892825706828
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.03301235649153611,
+            "psnr_y_gap_to_teacher": 1.8538015839111814,
+            "ssim_y_gain_over_previous": 0.0020173822674482977,
+            "ssim_y_gap_to_teacher": 0.11697764390591736,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.09326813014780555,
+              "psnr_y": 0.10358448031555056,
+              "ssim_y": 0.006404494937451433
+            }
+          }
+        },
+        "city": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.014863316801715598,
+            "psnr_y_gap_to_teacher": 1.3523487832101218,
+            "ssim_y_gain_over_previous": 0.0014203321575112504,
+            "ssim_y_gap_to_teacher": 0.10241658187823555,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.05571926434950569,
+              "psnr_y": 0.05652704199990666,
+              "ssim_y": 0.005749344004400303
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.010107770421686979,
+            "psnr_y_gap_to_teacher": 1.305669546049483,
+            "ssim_y_gain_over_previous": 0.0009413497889791955,
+            "ssim_y_gap_to_teacher": 0.09737892760049749,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.0830875935376092,
+              "psnr_y": 0.08251643165468536,
+              "ssim_y": 0.007099083243822912
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.020213306479249127,
+            "psnr_y_gap_to_teacher": 1.4048629250158378,
+            "ssim_y_gain_over_previous": 0.0019591873221102007,
+            "ssim_y_gap_to_teacher": 0.10808394294069079,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.0249298940128746,
+              "psnr_y": 0.027288978638292605,
+              "ssim_y": 0.004230887360049729
+            }
+          }
+        },
+        "foliage": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.018633829246944345,
+            "psnr_y_gap_to_teacher": 1.3670619745840042,
+            "ssim_y_gain_over_previous": 0.0011843950134585723,
+            "ssim_y_gap_to_teacher": 0.08882650447720197,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.030354779705003665,
+              "psnr_y": 0.03280265621942746,
+              "ssim_y": 0.002805998702311796
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.013040862095376582,
+            "psnr_y_gap_to_teacher": 1.283687881976988,
+            "ssim_y_gain_over_previous": 0.0006588042559817486,
+            "ssim_y_gap_to_teacher": 0.07967607196421844,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.07345873947357973,
+              "psnr_y": 0.0674412833927569,
+              "ssim_y": 0.0041979330341689325
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.024459836696479442,
+            "psnr_y_gap_to_teacher": 1.4539099877163117,
+            "ssim_y_gain_over_previous": 0.0017318853858300232,
+            "ssim_y_gap_to_teacher": 0.09835820501155979,
+            "delta_vs_intermediate": {
+              "psnr_rgb": -0.014545178387258773,
+              "psnr_y": -0.003279247086116044,
+              "ssim_y": 0.0013560671066269459
+            }
+          }
+        },
+        "walk": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.03334277784777839,
+            "psnr_y_gap_to_teacher": 2.0202008937989753,
+            "ssim_y_gain_over_previous": 0.0010372574423267444,
+            "ssim_y_gap_to_teacher": 0.05443729634783179,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.18908081678708655,
+              "psnr_y": 0.1953740967981119,
+              "ssim_y": 0.0055955548507597985
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.027101648133786682,
+            "psnr_y_gap_to_teacher": 2.0764416419643297,
+            "ssim_y_gain_over_previous": 0.0007003757414446588,
+            "ssim_y_gap_to_teacher": 0.044665608583023375,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.1421142031512268,
+              "psnr_y": 0.14088325138288127,
+              "ssim_y": 0.0037425105870054765
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.03985526102761838,
+            "psnr_y_gap_to_teacher": 1.9615148957134032,
+            "ssim_y_gain_over_previous": 0.0013887861736817664,
+            "ssim_y_gap_to_teacher": 0.06463384010241369,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.23808945710275609,
+              "psnr_y": 0.25223410940530755,
+              "ssim_y": 0.007529166256416309
+            }
+          }
+        }
+      }
+    },
+    "reds": {
+      "windows": 376,
+      "frames_per_model": 1128,
+      "batch_size": 1,
+      "seconds": 134.06235279422253,
+      "metrics": {
+        "intermediate": {
+          "all": {
+            "all": {
+              "psnr_rgb": 25.318107883605027,
+              "psnr_y": 26.72652802838223,
+              "ssim_y": 0.7425060918429455
+            },
+            "endpoints": {
+              "psnr_rgb": 27.51816961965737,
+              "psnr_y": 28.863054030127213,
+              "ssim_y": 0.8036779784134166
+            },
+            "center": {
+              "psnr_rgb": 20.917984411500345,
+              "psnr_y": 22.453476024892268,
+              "ssim_y": 0.6201623187020033
+            }
+          },
+          "groups": {
+            "REDS": {
+              "all": {
+                "psnr_rgb": 25.318107883605027,
+                "psnr_y": 26.72652802838223,
+                "ssim_y": 0.7425060918429455
+              },
+              "endpoints": {
+                "psnr_rgb": 27.51816961965737,
+                "psnr_y": 28.863054030127213,
+                "ssim_y": 0.8036779784134166
+              },
+              "center": {
+                "psnr_rgb": 20.917984411500345,
+                "psnr_y": 22.453476024892268,
+                "ssim_y": 0.6201623187020033
+              }
+            }
+          }
+        },
+        "previous_tiny": {
+          "all": {
+            "all": {
+              "psnr_rgb": 25.458160269854083,
+              "psnr_y": 26.860729541514914,
+              "ssim_y": 0.7460946431556734
+            },
+            "endpoints": {
+              "psnr_rgb": 27.580659436865087,
+              "psnr_y": 28.92166983430958,
+              "ssim_y": 0.8057500803412482
+            },
+            "center": {
+              "psnr_rgb": 21.213161935832073,
+              "psnr_y": 22.738848955925583,
+              "ssim_y": 0.6267837687845237
+            }
+          },
+          "groups": {
+            "REDS": {
+              "all": {
+                "psnr_rgb": 25.458160269854083,
+                "psnr_y": 26.860729541514914,
+                "ssim_y": 0.7460946431556734
+              },
+              "endpoints": {
+                "psnr_rgb": 27.580659436865087,
+                "psnr_y": 28.92166983430958,
+                "ssim_y": 0.8057500803412482
+              },
+              "center": {
+                "psnr_rgb": 21.213161935832073,
+                "psnr_y": 22.738848955925583,
+                "ssim_y": 0.6267837687845237
+              }
+            }
+          }
+        },
+        "progressive": {
+          "all": {
+            "all": {
+              "psnr_rgb": 25.48521604658464,
+              "psnr_y": 26.887538065370286,
+              "ssim_y": 0.7468869222804917
+            },
+            "endpoints": {
+              "psnr_rgb": 27.603014214132802,
+              "psnr_y": 28.943537890856867,
+              "ssim_y": 0.8063837457071118
+            },
+            "center": {
+              "psnr_rgb": 21.24961971148832,
+              "psnr_y": 22.775538414397136,
+              "ssim_y": 0.6278932754272512
+            }
+          },
+          "groups": {
+            "REDS": {
+              "all": {
+                "psnr_rgb": 25.48521604658464,
+                "psnr_y": 26.887538065370286,
+                "ssim_y": 0.7468869222804917
+              },
+              "endpoints": {
+                "psnr_rgb": 27.603014214132802,
+                "psnr_y": 28.943537890856867,
+                "ssim_y": 0.8063837457071118
+              },
+              "center": {
+                "psnr_rgb": 21.24961971148832,
+                "psnr_y": 22.775538414397136,
+                "ssim_y": 0.6278932754272512
+              }
+            }
+          }
+        },
+        "teacher": {
+          "all": {
+            "all": {
+              "psnr_rgb": 26.653296881477914,
+              "psnr_y": 28.06006142934618,
+              "ssim_y": 0.7875997513353644
+            },
+            "endpoints": {
+              "psnr_rgb": 28.818215563805726,
+              "psnr_y": 30.1906475861368,
+              "ssim_y": 0.8443414316013378
+            },
+            "center": {
+              "psnr_rgb": 22.32345951682229,
+              "psnr_y": 23.79888911576494,
+              "ssim_y": 0.6741163908034178
+            }
+          },
+          "groups": {
+            "REDS": {
+              "all": {
+                "psnr_rgb": 26.653296881477914,
+                "psnr_y": 28.06006142934618,
+                "ssim_y": 0.7875997513353644
+              },
+              "endpoints": {
+                "psnr_rgb": 28.818215563805726,
+                "psnr_y": 30.1906475861368,
+                "ssim_y": 0.8443414316013378
+              },
+              "center": {
+                "psnr_rgb": 22.32345951682229,
+                "psnr_y": 23.79888911576494,
+                "ssim_y": 0.6741163908034178
+              }
+            }
+          }
+        }
+      },
+      "comparison": {
+        "all": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.026808523855372357,
+            "psnr_y_gap_to_teacher": 1.1725233639758947,
+            "ssim_y_gain_over_previous": 0.0007922791248182737,
+            "ssim_y_gap_to_teacher": 0.04071282905487272,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.16710816297961273,
+              "psnr_y": 0.16101003698805627,
+              "ssim_y": 0.004380830437546224
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.021868056547287296,
+            "psnr_y_gap_to_teacher": 1.247109695279935,
+            "ssim_y_gain_over_previous": 0.0006336653658636227,
+            "ssim_y_gap_to_teacher": 0.03795768589422599,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.08484459447543102,
+              "psnr_y": 0.08048386072965386,
+              "ssim_y": 0.002705767293695205
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.03668945847155314,
+            "psnr_y_gap_to_teacher": 1.0233507013678036,
+            "ssim_y_gain_over_previous": 0.0011095066427274647,
+            "ssim_y_gap_to_teacher": 0.046223115376166635,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.33163529998797614,
+              "psnr_y": 0.3220623895048682,
+              "ssim_y": 0.007730956725247817
+            }
+          }
+        },
+        "REDS": {
+          "all": {
+            "psnr_y_gain_over_previous": 0.026808523855372357,
+            "psnr_y_gap_to_teacher": 1.1725233639758947,
+            "ssim_y_gain_over_previous": 0.0007922791248182737,
+            "ssim_y_gap_to_teacher": 0.04071282905487272,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.16710816297961273,
+              "psnr_y": 0.16101003698805627,
+              "ssim_y": 0.004380830437546224
+            }
+          },
+          "endpoints": {
+            "psnr_y_gain_over_previous": 0.021868056547287296,
+            "psnr_y_gap_to_teacher": 1.247109695279935,
+            "ssim_y_gain_over_previous": 0.0006336653658636227,
+            "ssim_y_gap_to_teacher": 0.03795768589422599,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.08484459447543102,
+              "psnr_y": 0.08048386072965386,
+              "ssim_y": 0.002705767293695205
+            }
+          },
+          "center": {
+            "psnr_y_gain_over_previous": 0.03668945847155314,
+            "psnr_y_gap_to_teacher": 1.0233507013678036,
+            "ssim_y_gain_over_previous": 0.0011095066427274647,
+            "ssim_y_gap_to_teacher": 0.046223115376166635,
+            "delta_vs_intermediate": {
+              "psnr_rgb": 0.33163529998797614,
+              "psnr_y": 0.3220623895048682,
+              "ssim_y": 0.007730956725247817
+            }
+          }
+        }
+      }
+    }
+  },
+  "protocol": {
+    "shared": "FP32; RGB rounded to uint8 before RGB/Y PSNR and Y SSIM; no border crop.",
+    "vimeo": "Seven output frames, three adjacent tiny pairs, first occurrence of shared endpoint; x4 PyTorch antialiased bicubic LR rounded to 8-bit; arithmetic frame means.",
+    "vid4": "Original index_generation(7, N); each global frame scored once, first occurrence; LR as Vimeo; equally weighted sequence means; endpoint/center follows the retained window input timestamps, which can change parity in the final window.",
+    "reds": "Every seven-frame test window, middle three targets; x4 antialiased bicubic float LR; arithmetic frame-observation means including overlapping windows."
+  },
+  "fps": {
+    "protocol": "FP32; LR 144x180; batch 1; 10 warmups, 100 timed calls; model forward only; unique streaming FPS excludes the shared endpoint between calls.",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "models": {
+      "progressive": {
+        "input_shape": [
+          1,
+          2,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 3,
+        "milliseconds_per_call": 14.264211803674698,
+        "returned_frames_per_second": 210.31656296824968,
+        "unique_stream_frames_per_second": 140.21104197883312
+      },
+      "previous_tiny": {
+        "input_shape": [
+          1,
+          2,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 3,
+        "milliseconds_per_call": 14.227555133402348,
+        "returned_frames_per_second": 210.85843434595682,
+        "unique_stream_frames_per_second": 140.57228956397122
+      },
+      "intermediate": {
+        "input_shape": [
+          1,
+          2,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 3,
+        "milliseconds_per_call": 14.226695466786623,
+        "returned_frames_per_second": 210.87117574167127,
+        "unique_stream_frames_per_second": 140.58078382778086
+      },
+      "teacher": {
+        "input_shape": [
+          1,
+          4,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 7,
+        "milliseconds_per_call": 84.17096571996808,
+        "returned_frames_per_second": 83.16406898892657,
+        "unique_stream_frames_per_second": 71.28348770479421
+      }
+    }
+  }
+}

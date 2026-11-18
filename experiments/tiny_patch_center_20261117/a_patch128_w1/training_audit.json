@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "steps": 20000,
+  "examples": 320000,
+  "optimizer_step_histogram": {
+    "20000": 344
+  },
+  "best_step": 20000,
+  "best_validation": {
+    "vimeo": 33.15994488542944,
+    "reds": 25.522783127271182,
+    "balanced_mean": 29.34136400635031
+  },
+  "initial_validation_mean": 29.329028606985922,
+  "patch_size": 128,
+  "center_weight": 1.0,
+  "sampling_seed": 2027,
+  "seconds": 586.1422163164243,
+  "best_sha256": "f4d85a98f321d965e2fc758473dbbcd3918ca0fa231aeb9a0f14fffef968b70a"
+}

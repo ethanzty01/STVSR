@@ -1,0 +1,243 @@
+{
+  "checked_at_utc": "2026-11-16T16:42:48.205273+00:00",
+  "status": "complete",
+  "preflight_passed": true,
+  "scope": "CPU metadata, source-code review and earlier CPU four-model smoke; GPU evaluation pending",
+  "run_dir": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16",
+  "command_workdir": "/home/tyzheng/RSTT",
+  "command": "conda run --no-capture-output -n SRCHIP python -B evaluate_progressive.py --run-dir experiments/progressive_rstt_s_gt80k_b16 --intermediate-checkpoint experiments/progressive_rstt_s_140k_b16/final.pth --vimeo-batch-size 4 --reds-batch-size 1 --workers 2 --metric-workers 4 --threads 4 --fps",
+  "training": {
+    "vimeo": {
+      "clip_counts": {
+        "train": 64484,
+        "validation": 128,
+        "test": 7815
+      },
+      "clip_id_intersections": {
+        "train/validation": 0,
+        "train/test": 0,
+        "validation/test": 0
+      },
+      "resolved_path_intersections": {
+        "train/validation": 0,
+        "train/test": 0,
+        "validation/test": 0
+      }
+    },
+    "reds": {
+      "clip_counts": {
+        "train": 24628,
+        "validation": 128,
+        "test": 376
+      },
+      "clip_id_intersections": {
+        "train/validation": 0,
+        "train/test": 0,
+        "validation/test": 0
+      },
+      "sequence_counts": {
+        "train": 262,
+        "val": 4,
+        "test": 4
+      },
+      "validation_sequences": [
+        "240",
+        "241",
+        "246",
+        "257"
+      ],
+      "test_sequences": [
+        "000",
+        "011",
+        "015",
+        "020"
+      ],
+      "sequence_intersections": {
+        "train/val": 0,
+        "train/test": 0,
+        "val/test": 0
+      },
+      "resolved_path_intersections": {
+        "train/val": 0,
+        "train/test": 0,
+        "val/test": 0
+      }
+    }
+  },
+  "main_and_extension_train_ids_identical": true,
+  "main_and_extension_validation_ids_identical": true,
+  "split_files_sha256": {
+    "experiments/progressive_rstt_s_140k_b16/split_ids.json": "1326bbd52153a94597224bdf40eb9cb7e3301e7df1b157595b0e1668176e635e",
+    "experiments/progressive_rstt_s_gt80k_b16/split_ids.json": "ad96ca8b40ff14183b11fa92b4ccdcb71e1750e910eeec9eb14d3dd4fceeffb5"
+  },
+  "datasets": {
+    "vimeo": {
+      "raw_clips": 7824,
+      "excluded_clips": 9,
+      "clips": 7815,
+      "motion_groups": {
+        "slow": 1613,
+        "medium": 4977,
+        "fast": 1225
+      },
+      "frames_per_clip": 7,
+      "frames_per_model": 54705,
+      "expected_csv_rows": 218820,
+      "aggregation": "Arithmetic frame mean per motion group; four observed endpoints and three interpolated frames per clip; LR rounded to RGB8"
+    },
+    "vid4": {
+      "sequences": {
+        "calendar": {
+          "frames": 41,
+          "retained_windows": 7,
+          "endpoints": 21,
+          "center": 20
+        },
+        "city": {
+          "frames": 34,
+          "retained_windows": 6,
+          "endpoints": 18,
+          "center": 16
+        },
+        "foliage": {
+          "frames": 49,
+          "retained_windows": 8,
+          "endpoints": 25,
+          "center": 24
+        },
+        "walk": {
+          "frames": 47,
+          "retained_windows": 8,
+          "endpoints": 24,
+          "center": 23
+        }
+      },
+      "frames_per_model": 171,
+      "expected_csv_rows": 684,
+      "aggregation": "Each global frame scored once using first occurrence; mean per sequence, then equal mean of four sequences; kind follows retained window input times; LR rounded to RGB8"
+    },
+    "reds": {
+      "windows": 376,
+      "windows_per_sequence": {
+        "000": 94,
+        "011": 94,
+        "015": 94,
+        "020": 94
+      },
+      "frames_per_model": 1128,
+      "expected_csv_rows": 4512,
+      "aggregation": "Arithmetic mean over middle-three-frame observations of every seven-frame window; overlapping observations retained; float LR"
+    }
+  },
+  "model_names": [
+    "progressive",
+    "previous_tiny",
+    "intermediate",
+    "teacher"
+  ],
+  "checkpoint_sha256": {
+    "experiments/progressive_rstt_s_140k_b16/final.pth": "1c8840c86b0ceccc80459ab1a91099016dd1c86d64168dd7daad878238e16185",
+    "experiments/tiny_mixed_200k_b16/distilled_best.pth": "882203dc99011eea7773d53abceb9c6e9707fc005430031f6a08323f01d9dbc8",
+    "checkpoints/RSTT-S/f96d4w4h24816Ushape0res_1690000.pth": "c18b45d025f4217b3fe13f9e853a46543707d79c58864c2fdfefc9071fb422da"
+  },
+  "final_checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/final.pth",
+  "memory_review": {
+    "gpu_outputs": "Each tiny pair and teacher clip are copied to CPU immediately; GPU retains only current forward activations and four models, not all test predictions",
+    "cpu_metric_queue_max_batches": 4,
+    "cuda_peak_measured_in_this_preflight": false
+  },
+  "baseline_reference": {
+    "previous_tiny": {
+      "vimeo": {
+        "fast": {
+          "psnr_rgb": 31.33477887824177,
+          "psnr_y": 33.09767817528929,
+          "ssim_y": 0.8905838669945775
+        },
+        "medium": {
+          "psnr_rgb": 30.633824179943087,
+          "psnr_y": 32.300519079192796,
+          "ssim_y": 0.8926393875943998
+        },
+        "slow": {
+          "psnr_rgb": 29.21954135567796,
+          "psnr_y": 30.804243830293167,
+          "ssim_y": 0.8708410289317727
+        }
+      },
+      "vid4": {
+        "psnr_rgb": 23.065920395788687,
+        "psnr_y": 24.532444176310904,
+        "ssim_y": 0.6989114203148082
+      },
+      "reds": {
+        "psnr_rgb": 25.31806816845669,
+        "psnr_y": 26.726490281305157,
+        "ssim_y": 0.7425065277391698
+      }
+    },
+    "teacher": {
+      "vimeo": {
+        "fast": {
+          "psnr_rgb": 34.69103780302792,
+          "psnr_y": 36.52496977581588,
+          "ssim_y": 0.937625265031718
+        },
+        "medium": {
+          "psnr_rgb": 33.59930759694142,
+          "psnr_y": 35.32112232067353,
+          "ssim_y": 0.9347893561213635
+        },
+        "slow": {
+          "psnr_rgb": 31.664618134756967,
+          "psnr_y": 33.26852592947176,
+          "ssim_y": 0.912629883039533
+        }
+      },
+      "vid4": {
+        "psnr_rgb": 24.752916111751524,
+        "psnr_y": 26.279144957795154,
+        "ssim_y": 0.7941564941798178
+      },
+      "reds": {
+        "psnr_rgb": 26.653296881477914,
+        "psnr_y": 28.06006142934618,
+        "ssim_y": 0.7875997513353644
+      }
+    }
+  },
+  "baseline_agreement_review_tolerance": {
+    "psnr_y_db": 0.001,
+    "ssim_y": 1e-05
+  },
+  "runtime_estimate_minutes": [
+    12,
+    15
+  ],
+  "runtime_evidence": {
+    "old_paper_three_model_vimeo_clips": 7604,
+    "old_paper_three_model_vimeo_seconds": 460.0220515411347,
+    "old_five_model_middle_triplet_reds_seconds": 159.52968696597964
+  },
+  "metadata_note": "GT extension config mode is supervised and teacher_sha256 is null; its generic protocol string still mentions KD. Effective training is GT-only.",
+  "evaluation_started_at_utc": "2026-11-16T17:10:16.827744+00:00",
+  "final_checkpoint_sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+  "evaluation_log": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/evaluation.log",
+  "interrupted_attempts": [
+    {
+      "exit_code": 143,
+      "last_logged_dataset": "vimeo",
+      "last_logged_clips": 804,
+      "log": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/evaluation.interrupted_01.log",
+      "cause": "External SIGTERM; no Python traceback; free host RAM >58 GiB and no CUDA process remained"
+    }
+  ],
+  "evaluation_finished_at_utc": "2026-11-16T17:25:35.610203+00:00",
+  "evaluation_audit_passed": true,
+  "evaluation_audit_path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/evaluation_audit.json",
+  "final_checkpoint_selection": {
+    "local_step": 74000,
+    "cumulative_step": 214000,
+    "total_optimizer_steps_executed": 220000
+  }
+}

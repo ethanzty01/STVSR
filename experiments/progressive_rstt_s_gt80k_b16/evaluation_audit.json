@@ -1,0 +1,434 @@
+{
+  "checked_at_utc": "2026-11-16T17:26:03.842986+00:00",
+  "passed": true,
+  "datasets": {
+    "vimeo": {
+      "rows": 218820,
+      "expected_rows": 218820,
+      "all_finite": true,
+      "ids_complete_and_unique": true,
+      "per_model": {
+        "progressive": {
+          "frames": 54705,
+          "unique_clip_frame_pairs": 54705,
+          "groups": {
+            "slow": 11291,
+            "medium": 34839,
+            "fast": 8575
+          },
+          "kinds": {
+            "endpoints": 31260,
+            "center": 23445
+          }
+        },
+        "previous_tiny": {
+          "frames": 54705,
+          "unique_clip_frame_pairs": 54705,
+          "groups": {
+            "slow": 11291,
+            "medium": 34839,
+            "fast": 8575
+          },
+          "kinds": {
+            "endpoints": 31260,
+            "center": 23445
+          }
+        },
+        "intermediate": {
+          "frames": 54705,
+          "unique_clip_frame_pairs": 54705,
+          "groups": {
+            "slow": 11291,
+            "medium": 34839,
+            "fast": 8575
+          },
+          "kinds": {
+            "endpoints": 31260,
+            "center": 23445
+          }
+        },
+        "teacher": {
+          "frames": 54705,
+          "unique_clip_frame_pairs": 54705,
+          "groups": {
+            "slow": 11291,
+            "medium": 34839,
+            "fast": 8575
+          },
+          "kinds": {
+            "endpoints": 31260,
+            "center": 23445
+          }
+        }
+      },
+      "csv_recomputed_metric_max_abs_error": 0.0,
+      "comparison_recomputed_max_abs_error": 0.0,
+      "csv_sha256": "20825991fa44b869f958a5376e80c46b41a2853fd421ec2a59e9984c6f59a640",
+      "seconds": 608.6080354657024
+    },
+    "vid4": {
+      "rows": 684,
+      "expected_rows": 684,
+      "all_finite": true,
+      "ids_complete_and_unique": true,
+      "per_model": {
+        "progressive": {
+          "frames": 171,
+          "unique_clip_frame_pairs": 171,
+          "groups": {
+            "calendar": 41,
+            "city": 34,
+            "foliage": 49,
+            "walk": 47
+          },
+          "kinds": {
+            "endpoints": 88,
+            "center": 83
+          }
+        },
+        "previous_tiny": {
+          "frames": 171,
+          "unique_clip_frame_pairs": 171,
+          "groups": {
+            "calendar": 41,
+            "city": 34,
+            "foliage": 49,
+            "walk": 47
+          },
+          "kinds": {
+            "endpoints": 88,
+            "center": 83
+          }
+        },
+        "intermediate": {
+          "frames": 171,
+          "unique_clip_frame_pairs": 171,
+          "groups": {
+            "calendar": 41,
+            "city": 34,
+            "foliage": 49,
+            "walk": 47
+          },
+          "kinds": {
+            "endpoints": 88,
+            "center": 83
+          }
+        },
+        "teacher": {
+          "frames": 171,
+          "unique_clip_frame_pairs": 171,
+          "groups": {
+            "calendar": 41,
+            "city": 34,
+            "foliage": 49,
+            "walk": 47
+          },
+          "kinds": {
+            "endpoints": 88,
+            "center": 83
+          }
+        }
+      },
+      "csv_recomputed_metric_max_abs_error": 0.0,
+      "comparison_recomputed_max_abs_error": 0.0,
+      "csv_sha256": "33b7d9b860c179c2a6cc509808a4e704a70c447e9641f326747364d9d78e1db1",
+      "seconds": 10.174903524108231
+    },
+    "reds": {
+      "rows": 4512,
+      "expected_rows": 4512,
+      "all_finite": true,
+      "ids_complete_and_unique": true,
+      "per_model": {
+        "progressive": {
+          "frames": 1128,
+          "unique_clip_frame_pairs": 1128,
+          "groups": {
+            "REDS": 1128
+          },
+          "kinds": {
+            "endpoints": 752,
+            "center": 376
+          }
+        },
+        "previous_tiny": {
+          "frames": 1128,
+          "unique_clip_frame_pairs": 1128,
+          "groups": {
+            "REDS": 1128
+          },
+          "kinds": {
+            "endpoints": 752,
+            "center": 376
+          }
+        },
+        "intermediate": {
+          "frames": 1128,
+          "unique_clip_frame_pairs": 1128,
+          "groups": {
+            "REDS": 1128
+          },
+          "kinds": {
+            "endpoints": 752,
+            "center": 376
+          }
+        },
+        "teacher": {
+          "frames": 1128,
+          "unique_clip_frame_pairs": 1128,
+          "groups": {
+            "REDS": 1128
+          },
+          "kinds": {
+            "endpoints": 752,
+            "center": 376
+          }
+        }
+      },
+      "csv_recomputed_metric_max_abs_error": 0.0,
+      "comparison_recomputed_max_abs_error": 0.0,
+      "csv_sha256": "ee3976beec6785089fe4fa37038db9ee71953d2cd3bc8fd27f8daf11848a351e",
+      "seconds": 133.60134445969015
+    }
+  },
+  "models": {
+    "progressive": {
+      "path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/final.pth",
+      "sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+      "step": 74000,
+      "cumulative_step": 214000,
+      "validation_psnr_y": {
+        "vimeo": 33.14001868682518,
+        "reds": 25.518034728220698,
+        "balanced_mean": 29.32902670752294
+      },
+      "model_config": {
+        "embed_dim": 32,
+        "depth": 2,
+        "drop_path_rate": 0.0,
+        "head": "direct"
+      },
+      "parameters": 286140
+    },
+    "previous_tiny": {
+      "path": "/home/tyzheng/RSTT/experiments/tiny_mixed_200k_b16/distilled_best.pth",
+      "sha256": "882203dc99011eea7773d53abceb9c6e9707fc005430031f6a08323f01d9dbc8",
+      "step": 198000,
+      "cumulative_step": 218000,
+      "validation_psnr_y": {
+        "vimeo": 32.98898804780025,
+        "reds": 25.4250934985173,
+        "balanced_mean": 29.207040773158774
+      },
+      "model_config": {
+        "embed_dim": 32,
+        "depth": 2,
+        "drop_path_rate": 0.0,
+        "head": "direct"
+      },
+      "parameters": 286140
+    },
+    "intermediate": {
+      "path": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/final.pth",
+      "sha256": "1c8840c86b0ceccc80459ab1a91099016dd1c86d64168dd7daad878238e16185",
+      "step": 20000,
+      "selected_stage": "08_gt_finetune",
+      "source_checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/08_gt_finetune/best.pth",
+      "cumulative_step": 140000,
+      "validation_psnr_y": {
+        "vimeo": 32.79379225015529,
+        "reds": 25.381822516685563,
+        "balanced_mean": 29.087807383420426
+      },
+      "model_config": {
+        "embed_dim": 32,
+        "depth": 2,
+        "head": "direct",
+        "drop_path_rate": 0.0
+      },
+      "parameters": 286140
+    },
+    "teacher": {
+      "path": "/home/tyzheng/RSTT/checkpoints/RSTT-S/f96d4w4h24816Ushape0res_1690000.pth",
+      "sha256": "c18b45d025f4217b3fe13f9e853a46543707d79c58864c2fdfefc9071fb422da",
+      "parameters": 4485275
+    }
+  },
+  "evaluation_exit_code": 0,
+  "baseline_agreement": {
+    "previous_tiny": {
+      "vimeo": {
+        "fast": {
+          "current_minus_historical": {
+            "psnr_rgb": 0.0,
+            "psnr_y": 0.0,
+            "ssim_y": 0.0
+          },
+          "within_review_tolerance": true
+        },
+        "medium": {
+          "current_minus_historical": {
+            "psnr_rgb": 0.0,
+            "psnr_y": 0.0,
+            "ssim_y": 0.0
+          },
+          "within_review_tolerance": true
+        },
+        "slow": {
+          "current_minus_historical": {
+            "psnr_rgb": 0.0,
+            "psnr_y": 0.0,
+            "ssim_y": 0.0
+          },
+          "within_review_tolerance": true
+        }
+      },
+      "vid4": {
+        "all": {
+          "current_minus_historical": {
+            "psnr_rgb": -6.176400408008931e-06,
+            "psnr_y": -6.169757366336626e-06,
+            "ssim_y": -3.7783079731568137e-07
+          },
+          "within_review_tolerance": true
+        }
+      },
+      "reds": {
+        "all": {
+          "current_minus_historical": {
+            "psnr_rgb": -1.0152205831559513e-07,
+            "psnr_y": -2.1106117742419883e-07,
+            "ssim_y": 4.367286066120357e-08
+          },
+          "within_review_tolerance": true
+        }
+      }
+    },
+    "teacher": {
+      "vimeo": {
+        "fast": {
+          "current_minus_historical": {
+            "psnr_rgb": -0.0001064628825275804,
+            "psnr_y": -0.0001165594298768724,
+            "ssim_y": -1.3549389340505869e-06
+          },
+          "within_review_tolerance": true
+        },
+        "medium": {
+          "current_minus_historical": {
+            "psnr_rgb": -7.10841643822846e-05,
+            "psnr_y": -7.570234989628943e-05,
+            "ssim_y": -1.1755937083801626e-06
+          },
+          "within_review_tolerance": true
+        },
+        "slow": {
+          "current_minus_historical": {
+            "psnr_rgb": -1.7262280184837664e-05,
+            "psnr_y": -1.2661613403963656e-05,
+            "ssim_y": -8.714397152775888e-07
+          },
+          "within_review_tolerance": true
+        }
+      },
+      "vid4": {
+        "all": {
+          "current_minus_historical": {
+            "psnr_rgb": -2.5121730580224266e-06,
+            "psnr_y": -4.237838719944875e-06,
+            "ssim_y": -3.098804020051915e-07
+          },
+          "within_review_tolerance": true
+        }
+      },
+      "reds": {
+        "all": {
+          "current_minus_historical": {
+            "psnr_rgb": 0.0,
+            "psnr_y": 0.0,
+            "ssim_y": 0.0
+          },
+          "within_review_tolerance": true
+        }
+      }
+    }
+  },
+  "protocol": {
+    "shared": "FP32; RGB rounded to uint8 before RGB/Y PSNR and Y SSIM; no border crop.",
+    "vimeo": "Seven output frames, three adjacent tiny pairs, first occurrence of shared endpoint; x4 PyTorch antialiased bicubic LR rounded to 8-bit; arithmetic frame means.",
+    "vid4": "Original index_generation(7, N); each global frame scored once, first occurrence; LR as Vimeo; equally weighted sequence means; endpoint/center follows the retained window input timestamps, which can change parity in the final window.",
+    "reds": "Every seven-frame test window, middle three targets; x4 antialiased bicubic float LR; arithmetic frame-observation means including overlapping windows."
+  },
+  "scope": "Full four-model test and FPS; CPU CSV/metric audit",
+  "fps": {
+    "protocol": "FP32; LR 144x180; batch 1; 10 warmups, 100 timed calls; model forward only; unique streaming FPS excludes the shared endpoint between calls.",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "models": {
+      "progressive": {
+        "input_shape": [
+          1,
+          2,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 3,
+        "milliseconds_per_call": 14.262584373354912,
+        "returned_frames_per_second": 210.3405611120901,
+        "unique_stream_frames_per_second": 140.2270407413934
+      },
+      "previous_tiny": {
+        "input_shape": [
+          1,
+          2,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 3,
+        "milliseconds_per_call": 14.22418525442481,
+        "returned_frames_per_second": 210.9083892215739,
+        "unique_stream_frames_per_second": 140.6055928143826
+      },
+      "intermediate": {
+        "input_shape": [
+          1,
+          2,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 3,
+        "milliseconds_per_call": 14.220368443056941,
+        "returned_frames_per_second": 210.9649979895382,
+        "unique_stream_frames_per_second": 140.64333199302547
+      },
+      "teacher": {
+        "input_shape": [
+          1,
+          4,
+          3,
+          144,
+          180
+        ],
+        "output_frames_per_call": 7,
+        "milliseconds_per_call": 84.11417823284864,
+        "returned_frames_per_second": 83.22021503464357,
+        "unique_stream_frames_per_second": 71.33161288683735
+      }
+    }
+  },
+  "total_csv_rows": 224016,
+  "result_sha256": "3bcf01367404dedbb5279fb1ecf30a01fb07e9f2466d333e7df0c9918cb1d7f9",
+  "runtime_seconds": 752.3842834495008,
+  "interrupted_attempts": [
+    {
+      "exit_code": 143,
+      "last_logged_dataset": "vimeo",
+      "last_logged_clips": 804,
+      "log": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/evaluation.interrupted_01.log",
+      "cause": "External SIGTERM; no Python traceback; free host RAM >58 GiB and no CUDA process remained"
+    }
+  ]
+}

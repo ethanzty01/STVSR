@@ -1,0 +1,11 @@
+{
+  "additional_steps": 20000,
+  "base_step": 214000,
+  "cumulative_step": 234000,
+  "examples": 320000,
+  "examples_per_dataset": 160000,
+  "seconds": 586.1422163164243,
+  "best_validation_psnr_y": 29.34136400635031,
+  "peak_allocated_mib": 515.685546875,
+  "peak_reserved_mib": 714.0
+}

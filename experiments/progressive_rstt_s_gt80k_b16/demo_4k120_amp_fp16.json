@@ -1,0 +1,51 @@
+{
+  "input": "/home/tyzheng/RSTT/experiments/tiny_mixed_200k_b16/demo_input_960x540_60fps.mp4",
+  "output": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/demo_4k120_amp_fp16.mp4",
+  "checkpoint": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16/final.pth",
+  "checkpoint_sha256": "dea5bd1f14f821adab139f87ec77223bdc68651ccf44dea400880b91d1dbf3a0",
+  "model_config": {
+    "embed_dim": 32,
+    "depth": 2,
+    "drop_path_rate": 0.0,
+    "head": "direct"
+  },
+  "parameters": 286140,
+  "precision": "amp-fp16",
+  "torch": "2.7.1+cu128",
+  "opencv": "4.13.0",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "cudnn_benchmark": true,
+  "input_width": 960,
+  "input_height": 540,
+  "input_fps": 60.0,
+  "input_frames": 60,
+  "model_predicted_frames": 119,
+  "final_hold_frames": 1,
+  "encoded_frames": 120,
+  "input_duration_seconds": 1.0,
+  "end_to_end_seconds": 25.71196541376412,
+  "encoded_frames_per_second": 4.667087796242976,
+  "verified_output": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 120.0,
+    "container_frame_count": 120,
+    "decoded_frame_count": 120,
+    "duration_seconds": 1.0
+  },
+  "overall_measured_peak": {
+    "allocated_mib": 9.59033203125,
+    "reserved_mib": 3876.0,
+    "peak_allocated_mib": 2946.11962890625,
+    "peak_reserved_mib": 3876.0,
+    "sampled_process_peak_mib": 4492.0,
+    "sample_count": 213,
+    "sample_interval_seconds": 0.1,
+    "error": null,
+    "baseline_allocated_mib": 1.46533203125,
+    "peak_increment_mib": 2944.654296875
+  },
+  "codec": "mp4v",
+  "codec_backend": "OpenCV FFmpeg CPU",
+  "protocol": "Standalone tiny, batch 1, inference_mode, bounded pair streaming; CPU decode, GPU forward, immediate CPU RGB8 conversion and CPU encoding. Includes cold-forward peak. Final CPU frame held once to preserve duration."
+}

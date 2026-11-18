@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-16T14:44:08.083066+00:00",
+  "files": {
+    "train_progressive.py": "91543e50d3c72ac046af4e2c139b38130e58240dc596841930bc4257c194cedb",
+    "evaluate_progressive.py": "30d05ed44e947cbcad9f470ccad46b35bc434f47fda997cbbd59293dbdb5d03b",
+    "audit_progressive.py": "8862ba8ee6f7bb92f588c1341a9aa87b09490c2ad1e81b4d61a66731bc566015",
+    "PROGRESSIVE_TRAINING.md": "a5baaba923e2ba9fe5a3d9a3b2b4174cfa2a7980ba786ea342d81f251b1d24ab",
+    "train_tiny_mixed.py": "f675cbfad45ed20aab9d0bb635bec9d830ccd117ab51643e02b9845c1f990437",
+    "distill_tiny.py": "b6cc32e47446298e98c6fdc3a3437b7e2a2457fc250d514898757b0ad7d93cf9",
+    "distill_data.py": "2910dba31455c5dcd036e0edf404ecccb6bdc2d1c7ab7d2477d0bf8410647bfd",
+    "distill_metrics.py": "bf5fa082cbbbd0c1ddefdd5f5bb714265a0a57157425737aa0be99f3095532b2",
+    "eval_paper_tiny.py": "fabc2813b995c0514ea0cda996bf9c956365f77f89a2ea90ef3bee947263e084",
+    "models/RSTT_progressive.py": "59dcaa712470bee0425bd7f09a67f5c0d22b371dcd1e7a09f3cbc5c055341a5e",
+    "models/RSTT_tiny.py": "e39ce2f45deee15b8d1068e9ef3d9fa3117bb020e8aed8ed67d0083d5c4c13ff",
+    "models/RSTT.py": "6a2fad78fab02bfa5e62b80d2db7c25cae3e9ec72ee7a2877666229888217c4e",
+    "models/layers.py": "8e2ca25c4498966e9e99b8a754929878acf307b10fc469030f31520575d9dd8e",
+    "models/torch_layers.py": "9401ba2869262beeda289a6685ac06b4d795c232633c51b4ffe0c7a980ec86b4",
+    "utils/eval_utils.py": "3055dee5eb9dfea190b23e70141e5d8999bb9a444e18a1c3a8c51a94c810253a",
+    "tests/test_progressive_model.py": "e9ba537f5484f794d07225664b59ec8ba5de28e16059cb9a50c7e272be4eccbd",
+    "tests/test_progressive_training.py": "79158ea967e531a428cfd1f595965c21b40c22c9e0ff436fb7a7e1c5179d638c",
+    "tests/test_progressive_evaluation.py": "b5bd4284b63abb6b731bf89d5f1b2f6006d29e51da5a5caa6602e430afc8791d"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "data_root": "/home/tyzheng/Datasets_pt",
+  "init": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_140k_b16/final.pth",
+  "teacher": "/home/tyzheng/RSTT/checkpoints/RSTT-S/f96d4w4h24816Ushape0res_1690000.pth",
+  "output": "/home/tyzheng/RSTT/experiments/progressive_rstt_s_gt80k_b16",
+  "steps": 80000,
+  "batch_size": 16,
+  "patch_size": 128,
+  "mode": "supervised",
+  "lr": 5e-05,
+  "kd_weight": 0.5,
+  "val_every": 2000,
+  "log_every": 1000,
+  "validation_limit": 128,
+  "workers": 4,
+  "threads": 4,
+  "seed": 2026,
+  "precision": "bf16",
+  "device": "cuda",
+  "compile": true,
+  "compile_mode": "reduce-overhead",
+  "resume": false,
+  "profile_steps": 0,
+  "profile_warmup": 10,
+  "skip_test": true,
+  "vimeo_batch_size": 4,
+  "reds_batch_size": 1,
+  "torch": "2.7.1+cu128",
+  "device_name": "NVIDIA GeForce RTX 5090",
+  "base_step": 140000,
+  "model_config": {
+    "embed_dim": 32,
+    "depth": 2,
+    "head": "direct",
+    "drop_path_rate": 0.0
+  },
+  "parameters": 286140,
+  "training_clips": {
+    "vimeo": 64484,
+    "reds": 24628
+  },
+  "validation_clips": {
+    "vimeo": 128,
+    "reds": 128
+  },
+  "init_sha256": "1c8840c86b0ceccc80459ab1a91099016dd1c86d64168dd7daad878238e16185",
+  "teacher_sha256": null,
+  "dataset_ratio": {
+    "vimeo": 0.5,
+    "reds": 0.5
+  },
+  "protocol": "HR128 patches; equal dataset contribution per batch; GT Charbonnier + 0.5 KD; FP32 validation, rounded uint8 Y metrics, no border crop; best checkpoint maximizes equally weighted Vimeo/REDS validation PSNR-Y",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": true
+}
